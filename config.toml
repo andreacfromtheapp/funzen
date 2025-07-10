@@ -2,7 +2,7 @@
 theme = "tabi"
 
 # The URL the site will be built for
-base_url = "https://andreacfromtheapp.github.io"
+base_url = "https://funzen.netlify.app/"
 title = "~/funzen"
 description = "Andrea C Home Page"
 author = "Andrea C"
@@ -58,7 +58,7 @@ theme_switcher = true
 default_theme = "light"
 skin = "sakura"
 
-remote_repository_url = "https://github.com/andreacfromtheapp/andreacfromtheapp.github.io"
+# remote_repository_url = "https://github.com/andreacfromtheapp/funzen"
 remote_repository_git_platform = "auto" # Defaults to "auto".
 remote_repository_branch = "main" # Defaults to "main".
 show_remote_changes = true # Defaults to true.
@@ -118,7 +118,7 @@ socials = [
 footer_menu = [
   { name = "about", url = "about", trailing_slash = true },
   { name = "privacy", url = "privacy", trailing_slash = true },
-  { name = "stats", url = "https://andreac.goatcounter.com", trailing_slash = true},
+  { name = "stats", url = "https://funzen.goatcounter.com", trailing_slash = true},
   { name = "sitemap", url = "sitemap.xml", trailing_slash = false },
 ]
 
@@ -191,4 +191,4 @@ service = "goatcounter"
 # For Umami, this is the website ID.
 # For Plausible, this is the domain name (e.g. "example.com").
 # Note: Leave this field empty if you're self-hosting GoatCounter.
-id = "andreac"
+id = "funzen"
