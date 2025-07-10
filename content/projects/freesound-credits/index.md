@@ -8,8 +8,8 @@ date = 2024-08-06
 tags = ["apps", "rust", "rustlang", "freesound-credits"]
 
 [extra]
-local_image = "apps/freesound-credits/freesound-credits.svg"
-canonical_url = "https://andreacfromtheapp.github.io/apps/freesound-credits"
+local_image = "projects/freesound-credits/freesound-credits.svg"
+canonical_url = "https://andreacfromtheapp.github.io/projects/freesound-credits"
 +++
 
 A command line utility to help you credit [Freesound](https://freesound.org)
