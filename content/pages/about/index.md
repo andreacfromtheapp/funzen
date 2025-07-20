@@ -21,7 +21,7 @@ it because of its ethos, philosophy, and philanthropy. Then, as a proponent,
 with writings, ideas, coding, active participation and teachings. Used to be
 part of local [LUGs](https://en.wikipedia.org/wiki/Linux_user_group) and
 OpenLabs, doing activism and education about the importance of Copyleft at
-fairs, events, and one to one. Professionally since 2007.
+fairs, events, and one-to-ones. Professionally since 2007.
 
 ## Music
 
