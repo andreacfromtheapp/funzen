@@ -60,9 +60,9 @@ skin = "sakura"
 
 # remote_repository_url = "https://github.com/andreacfromtheapp/funzen"
 remote_repository_git_platform = "auto" # Defaults to "auto".
-remote_repository_branch = "main" # Defaults to "main".
-show_remote_changes = true # Defaults to true.
-show_remote_source = true # Defaults to true.
+remote_repository_branch = "main"       # Defaults to "main".
+show_remote_changes = true              # Defaults to true.
+show_remote_source = true               # Defaults to true.
 
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
 copy_button = true
@@ -118,7 +118,7 @@ socials = [
 footer_menu = [
   { name = "about", url = "about", trailing_slash = true },
   { name = "privacy", url = "privacy", trailing_slash = true },
-  { name = "stats", url = "https://funzen.goatcounter.com", trailing_slash = true},
+  { name = "stats", url = "https://funzen.goatcounter.com", trailing_slash = true },
   { name = "sitemap", url = "sitemap.xml", trailing_slash = false },
 ]
 
@@ -164,7 +164,7 @@ enable_csp = true
 # Please see https://welpo.github.io/tabi/blog/custom-font-subset/ to learn how to create this file.
 custom_subset = false
 
-copyright = "© $CURRENT_YEAR Andrea C $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license."
+copyright = "© $CURRENT_YEAR Andrea C $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license."
 
 [extra.giscus]
 enabled_for_all_posts = true
@@ -179,7 +179,7 @@ enable_reactions = 1
 comment_box_above_comments = true
 light_theme = "noborder_light"
 dark_theme = "noborder_dark"
-lang = ""  # Leave blank to match the page's language.
+lang = ""                            # Leave blank to match the page's language.
 lazy_loading = true
 
 [extra.analytics]
