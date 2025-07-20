@@ -12,5 +12,6 @@ max_projects = 3
 show_projects_first = false
 +++
 
-Versatile creative. [HSP](https://hsperson.com). Aspiring
-[Rustacean](https://www.rust-lang.org). SysOps. WebOps. DevOps.
+Versatile creative. Hobbyist [musician](https://gentlewashrecords.com/).
+[HSP](https://hsperson.com). Aspiring
+[Rustacean](https://en.wiktionary.org/wiki/Rustacean). WhatevOps.
