@@ -10,24 +10,16 @@ generate_feeds = true
 compile_sass = true
 minify_html = true
 build_search_index = true
-
 default_language = "en"
 taxonomies = [{ name = "tags", feed = true }]
 
 [search]
-# Whether to include the title of the page/section in the index
+index_format = "elasticlunr_json" # elasticlunr_javascript or elasticlunr_json
 include_title = true
-# Whether to include the description of the page/section in the index
 include_description = true
-# Whether to include the path of the page/section in the index
 include_path = true
-# Whether to include the rendered content of the page/section in the index
 include_content = true
-# At which character to truncate the content to. Useful if you have a lot of pages and the index would
-# become too big to load on the site. Defaults to not being set.
 truncate_content_length = 100
-# Accepted value "elasticlunr_javascript" or "elasticlunr_json".
-index_format = "elasticlunr_json"
 
 [markdown]
 highlight_code = true
@@ -56,7 +48,8 @@ skip_anchor_prefixes = []
 
 theme_switcher = true
 default_theme = "light"
-skin = "sakura"
+skin = "red"
+override_serif_with_sans = true
 
 # remote_repository_url = "https://github.com/andreacfromtheapp/funzen"
 remote_repository_git_platform = "auto" # Defaults to "auto".
@@ -66,12 +59,15 @@ show_remote_source = true               # Defaults to true.
 
 # Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
 copy_button = true
+code_block_name_links = true
+
 # Show the reading time of a page.
 show_reading_time = true
-footnote_backlinks = true
 
 # Enable KaTeX for all posts.
 katex = false
+# Enable Mermaid for all posts.
+mermaid = true
 
 quick_navigation_buttons = true
 separator = "•"
@@ -84,6 +80,7 @@ short_date_format = ""
 # Default: tag_name – n post[s]
 # Compact: tag_name^n (superscript number)
 compact_tags = false
+tag_sorting = "name" # name or frequency
 
 # Invert the order of the site title and page title in the browser tab.
 # Example: true => "Blog • ~/tabi", false => "~/tabi • Blog"
@@ -93,15 +90,17 @@ feed_icon = true
 favicon = "img/favicon.svg"
 favicon_emoji = ""
 social_media_card = "img/aa.webp"
+fediverse_creator = { handle = "andreacfromtheapp", domain = "c.im" }
 
 menu = [
   { name = "blog", url = "blog", trailing_slash = true },
   { name = "archive", url = "archive", trailing_slash = true },
   { name = "tags", url = "tags", trailing_slash = true },
   { name = "projects", url = "projects", trailing_slash = true },
+  { name = "about", url = "about", trailing_slash = true },
 ]
 
-full_content_in_feed = false
+full_content_in_feed = true
 
 # Email address for footer's social section. # Protect against spambots:
 # 1. Use base64 for email (convert at https://www.base64encode.org/ or `printf 'your@email.com' | base64`).
@@ -116,7 +115,6 @@ socials = [
 ]
 
 footer_menu = [
-  { name = "about", url = "about", trailing_slash = true },
   { name = "privacy", url = "privacy", trailing_slash = true },
   { name = "stats", url = "https://funzen.goatcounter.com", trailing_slash = true },
   { name = "sitemap", url = "sitemap.xml", trailing_slash = false },
@@ -150,6 +148,7 @@ allowed_domains = [
   ] },
   { directive = "frame-src", domains = [
     "player.vimeo.com",
+    "https://www.youtube-nocookie.com",
     "https://player-widget.mixcloud.com",
   ] },
 ]
@@ -165,6 +164,10 @@ enable_csp = true
 custom_subset = false
 
 copyright = "© $CURRENT_YEAR Andrea C $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license."
+
+# https://welpo.github.io/tabi/blog/mastering-tabi-settings/#iine
+iine = true
+iine_unified_languages = true
 
 [extra.giscus]
 enabled_for_all_posts = true
@@ -192,3 +195,13 @@ service = "goatcounter"
 # For Plausible, this is the domain name (e.g. "example.com").
 # Note: Leave this field empty if you're self-hosting GoatCounter.
 id = "funzen"
+
+[extra.webmentions]
+enable = false
+# Specify the domain registered with webmention.io.
+domain = "www.example.com"
+
+[extra.hcard]
+enable = true
+avatar = "img/aa.webp"
+biography = "Versatile creative. Hobbyist musician. HSP. Rustacean. WhatevOps."
