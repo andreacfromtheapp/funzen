@@ -49,7 +49,7 @@ skip_anchor_prefixes = []
 theme_switcher = true
 default_theme = "light"
 skin = "red"
-override_serif_with_sans = true
+# override_serif_with_sans = true
 
 # remote_repository_url = "https://github.com/andreacfromtheapp/funzen"
 remote_repository_git_platform = "auto" # Defaults to "auto".
