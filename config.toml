@@ -2,7 +2,7 @@
 theme = "tabi"
 
 # The URL the site will be built for
-base_url = "https://funzen.netlify.app/"
+base_url = "https://funzen.xyz/"
 title = "~/funzen"
 description = "Andrea C Home Page"
 author = "Andrea C"
