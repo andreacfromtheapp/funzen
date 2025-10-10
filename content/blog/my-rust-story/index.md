@@ -148,7 +148,7 @@ nah.
 
 After the second burn out and attempt at professional sound design, I decided to
 go back to IT. As a web developer this time. Since I love crafting UIs, UXs, and
-websites. I've learned HTML, CSS, SCSS, and _some JavaScript_[^5]. Until I fell
+websites. I've learned HTML, CSS, SASS, and _some JavaScript_[^5]. Until I fell
 in love with [Elm](https://elm-lang.org/)[^6].
 
 While I appreciated being able to code my own ideas and websites, I felt
