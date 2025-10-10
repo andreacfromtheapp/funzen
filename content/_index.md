@@ -12,6 +12,5 @@ max_projects = 3
 show_projects_first = false
 +++
 
-Versatile creative. Hobbyist [musician](https://gentlewashrecords.com/).
-[HSP](https://hsperson.com). Aspiring
-[Rustacean](https://en.wiktionary.org/wiki/Rustacean). WhatevOps.
+Versatile Creative. Hobbyist [Musician](https://gentlewashrecords.com/).
+[HSP](https://hsperson.com). [Rust](https://rust-lang.org/) Software Engineer.
