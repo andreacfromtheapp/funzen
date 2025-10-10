@@ -8,14 +8,15 @@ tags = ["socials", "blog", "apps", "faq"]
 
 Hi!
 
-this is my first post just to notify you that - for the time being - I don't
-post much here.
+This is my first post just to notify you that I don't post much here. If you
+would like to follow or stay up to date with my shenanigans,
+[@andreacfromtheapp@c.im](https://c.im/@andreacfromtheapp) is the place. The
+[Fediverse](https://news.elenarossini.com/fediverse-video/) is decentralized and
+more human. More socials in the footer.
 
-If you would like to follow or stay up to date with my shenanigans, Mastodon is
-the place. Preferable, as it's more human. Social links in the footer.
+## Projects And Apps
 
-## Apps
-
-Apps I create, have their own article. Check the apps top menu section!
+My projects and apps have their own dedicated blogpost. Check the projects
+section!
 
 🍻🚌
