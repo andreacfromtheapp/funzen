@@ -23,6 +23,28 @@ part of local [LUGs](https://en.wikipedia.org/wiki/Linux_user_group) and
 OpenLabs, doing activism and education about the importance of Copyleft at
 fairs, events, and one-to-ones. Professionally since 2007.
 
+## Blockchain
+
+An akin to Open Source area of interest was the [Cardano](https://cardano.org)
+[blockchain](https://en.wikipedia.org/wiki/Blockchain). The abundant
+similarities and the same revolutionary ethos led me to partake in the Cardano
+ecosystem as a
+[stake pool operator](https://docs.cardano.org/operating-a-stake-pool/about-stake-pools/)
+since the ITN, and in the [IOHK](https://iohk.io/) official working group named
+[Shelley Pioneers](https://iohk.io/en/blog/posts/2020/04/29/from-byron-to-shelley-part-one-the-testnets/).
+Until, one day, I lost anything digitally relevant. Thanks to Cardano I fell in
+love with purely functional programming and got Nix-curious.
+
+With time, I grew disillusioned with blockchain and cryptocurrency promises.
+Technologically, some of them do have the potential for astounding
+infrastructural improvements; in practice we all know how that's going.
+Unfortunately: grifters, scammers, sham-philanthropists, influencers,
+shilling-driven ethos, toxic stances, and dubious political alliances, buried
+the discourse around blockchains. As well as the handful companies and projects
+(like Cardano) pursuing peer reviewed academic work, high assurance code, formal
+methods, and research driven development, under a pile of manure; laden with
+stigma, polarization, and controversy.
+
 ## Music
 
 I am an electronic music musician and producer with my own record label:
