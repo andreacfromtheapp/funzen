@@ -301,8 +301,8 @@ far, thank you for your time.
     path. All I wanted: a job for independence and to get out on my own.
 
 [^2]:
-    I will summarize _My Linux Story or: How I Fell in Love with Copyleft_,
-    [here](/blog/my-linux-story/)
+    Care to read
+    [_My Linux Story or: How I Fell in Love with Copyleft and Revolution_](/blog/my-linux-story/)?
 
 [^3]:
     To drive a point, I've used a famous Venn diagram. Ikigai is more of a
