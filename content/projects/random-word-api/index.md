@@ -25,6 +25,13 @@ closed the spigot (presumably costs?). This is to say that, when I needed an
 itch to learn RESTful API development, I had a hole to fill in and somewhere to
 start from.
 
+To keep this summary of my learning brief, I've only reported the main points to
+highlight the reasoning behind the process; rather than using a lengthy bullet
+point list. A technical learning summary is available in the
+[Random Word API repository](https://github.com/andreacfromtheapp/random-word-api)
+README file. I hope you like it as much as I loved learning with this project!
+❤️🦀
+
 ## What This Is
 
 A [RESTful API](https://restfulapi.net/) built with
@@ -37,8 +44,8 @@ into a comprehensive learning experience.
 
 ## Demo It
 
-You can check [the online demo](https://word-api-axum.netlify.app/), browse the
-[source code](https://github.com/andreacfromtheapp/random-word-api), or
+You can check [the demo](https://word-api-axum.netlify.app/), browse the
+[source code](https://github.com/andreacfromtheapp/random-word-api), and
 [run it with Docker](https://github.com/andreacfromtheapp/random-word-api?tab=readme-ov-file#docker-compose).
 
 Note that the free tier I'm using shuts down after some time of inactivity or
@@ -50,8 +57,8 @@ apologies.
 
 I knew I needed to devise the same model and response of the OG API, as a
 starting point, so I could use my existing app as a _real world scenario_ to
-test against. The OG API used a very small response, so I treated it as a black
-box to reverse engineer. A methodology I find best suited for learning[^2]: it
+test against. The OG API used a very small response. I treated it as a black box
+to reverse engineer. A methodology I find best suited for learning[^2]: it
 forces one to _think hard_ while offering a safety net. Thus, I started from the
 response I was
 [already decoding in Elm](https://github.com/andreacfromtheapp/elm_speakandspell/blob/main/src/elm/SpeakAndSpell.elm#L202-L207):
@@ -76,7 +83,7 @@ can't afford at the moment.
 
 The OG API adopted data in JSON files. That could have been easier to implement,
 but what would have given in terms of learning? Moreover, I like SQL. I'll take
-SQL and rely on [SQLx](https://crates.io/crates/sqlx) guarantees, over learning
+SQL and rely on [SQLx](https://crates.io/crates/sqlx) guarantees over learning
 and using ORMs[^3], any day of the week!
 
 ## Beyond The Basics
@@ -103,9 +110,9 @@ authentication, authorization,
 
 In an iterative process, I refactored the code and added more features. I.e:
 enabling grammatical types endpoints. I future-proofed the API to accommodate
-additional languages with minimal efforts. It may seem like a pointless exercise
-for an API this simple with no real use, however, it was as valuable to my
-learning as learning best practices and patterns. It also demonstrates a
+additional languages with minimal efforts. This may seem like a pointless
+exercise for an API this simple with no real use, however, it was as valuable to
+my learning as best practices and patterns. It also demonstrates a
 forward-thinking attitude and a meticulous approach to projects. I suppose these
 are good things. Right!? 🖖🫣
 
@@ -113,32 +120,31 @@ are good things. Right!? 🖖🫣
 
 All code beyond the MVP, relied on
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development). Many confidently
-assert that TDD is dead, or that it was a mistake, however, I find it
-invaluable[^4] once the _core of the code_ is in place. To help me refactor and
-add new features with confidence; almost fearlessly.
+assert that TDD is dead, or that it was a mistake. I find it invaluable[^4] once
+the _core of the code_ is in place. It greatly helps refactoring and adding new
+features with confidence; almost fearlessly.
 
 ## Conclusion
 
 All things considered, I'm very happy with this learning journey. Starting from
 a known with simple requirements was a great choice. Especially for a _curious
-as a cat always longing to know more_ person like I am. The simple model opened
-up a plethora of possibilities beyond the MVP. _Is this enough!?_ Nah. _Can I
-call myself a backend developer?_ This was the first step towards it and I'm way
-more confident and knowledgeable than when I started this project. So, final
-verdict: HELL YEAH! 🤟🤟🤟
+as a cat always longing to know more_ person like I am. Moreover, the simple
+model opened up a plethora of possibilities beyond the MVP. _Is this enough!?_
+Nah. _Can I call myself a backend developer?_ This was the first step towards it
+and I'm way more confident and knowledgeable than when I started this project.
+So, final verdict: HELL YEAH! 🤟
 
 ## Disclaimers
-
-To keep this summary of my learning brief, I've only reported the main points to
-highlight the reasoning behind the process; rather than using a lengthy
-point-by-point. A technical learning summary is available in the
-[Random Word API repository](https://github.com/andreacfromtheapp/random-word-api)
-README file. I hope you like it as much as I loved learning with this project!
-❤️🦀
 
 I have sometime relied on Claude via
 [Amazon Q Cli](https://aws.amazon.com/developer/learning/q-developer-cli/) for
 _boring_ and repetitive stuff.
+
+I prompt engineered (meh) the API Rustdoc and both unit and integration testing.
+
+As this was my first API, I molded the MVP on
+[Code Like a Pro in Rust](https://www.manning.com/books/code-like-a-pro-in-rust)
+API chapter.
 
 ## Credits
 

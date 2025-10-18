@@ -135,11 +135,11 @@ open source projects.
 I had to start from somewhere. I needed learning BASH for my system
 administrator position. So, I made a
 [wrapper for a Dell firmware upgrade tool](https://github.com/andreacfromtheapp/dellbiosupdate.sh).
-At the time, I was close with Ruphy and as I started _fantasizing_ about making
-it a KDE app. I asked for some guidance. That would have meant learning C++ and
-Qt. That was short-lived. Perhaps, I had to slow down and learn something within
-my abilities. Some time later, I tried learning Ruby. After even some more time,
-I learned some Python[^4].
+At the time, I was close with Ruphy and I started _fantasizing_ about making it
+a KDE app. I asked for some guidance. That would have meant learning C++ and Qt.
+That was short-lived. Perhaps, I had to slow down and learn something within my
+abilities. Some time later, I tried learning Ruby. After even some more time, I
+learned some Python[^4].
 
 That said: _“the Impostor Syndrome is strong with this one”_. So, no dice. Yeah,
 nah.
@@ -153,7 +153,7 @@ in love with [Elm](https://elm-lang.org/)[^6].
 
 While I appreciated being able to code my own ideas and websites, I felt
 unsatisfied and disillusioned with JavaScript. Plenty of console errors and
-warnings were not only widely accepted. This was going to be the norm. That I
+warnings were not only widely accepted, this was going to be the norm. That I
 had to ignore it and live with this?! That didn't sit right with me. _Perhaps,
 web dev is not for me. After all._
 
@@ -166,9 +166,9 @@ clicked the right way. Eureka!
 
 Since I had fallen in love with Elm and Haskell, I yearned a functional
 programming job. Alas, _my_ career with Elm or Haskell wasn't going to be
-feasible. Elm still required JavaScript. For Haskell I lacked too much
-foundational knowledge. I wished someone had told me about functional
-programming _way sooner_. THAT I would have studied.
+feasible. Elm still required JavaScript. Haskell? I lacked too much foundational
+knowledge. I wished someone had told me about functional programming _way
+sooner_. THAT I would have studied.
 
 What now?! I still loved doing UIs and UXs. I had a couple of apps ideas to
 scratch. I had been _Swift-curious_ since its announcement at WWDC 14. I enjoyed
@@ -296,9 +296,10 @@ far, thank you for your time.
 ---
 
 [^1]:
-    In a nutshell: I didn't really like studying when I was a teen. Despite my
-    professors recommending my parents to take this or that institute and study
-    path. All I wanted: a job for independence and to get out on my own.
+    In a nutshell: I didn't like studying when I was a teen. Despite my
+    professors strongly recommended my parents for me to take this or that
+    institute and study path. All I wanted: a job for independence and to get
+    out on my own.
 
 [^2]:
     Care to read
@@ -331,10 +332,11 @@ far, thank you for your time.
     [https://www.hackingwithswift.com/](https://www.hackingwithswift.com/)
 
 [^8]:
-    When I fell in love with Rust design, it made me feel like I didn't waste
-    time in learning other languages. Although each of them seemed like a
-    _failed attempt at learning how to code_, they all gave me something.
-    Nothing you learn is wasted.
+    When I fell in love with
+    [Rust design](https://youtube.com/watch?v=k_-6KI3m31M), it made me feel like
+    I didn't waste time in learning other languages. Although each of them
+    seemed like a _failed attempt at learning how to code_, they all gave me
+    something. Nothing you learn is wasted.
 
 [^9]:
     There are a couple of books lists I have saved, however, since I have not
@@ -354,11 +356,11 @@ far, thank you for your time.
 [^11]:
     Besides not clicking with the tutroial code dump style, _How to Code it_
     [makes great arguments](https://www.howtocodeit.com/articles/master-hexagonal-architecture-rust#what-problems-does-hexagonal-architecture-solve)
-    I wouldn't make in a million years. I agree with them 100%.
+    I wouldn't make in a million years. I agree with them.
 
 [^12]:
     Since finding out about Manning Publications, with
     [Elm in Action](https://www.manning.com/books/elm-in-action) by
     [Richard Feldman](https://github.com/rtfeldman) - another great person I
     admire - they are the first IT book resource I rely upon. So far, so good.
-    Each book I studied, has proven a great resource.
+    Each book I studied has proven a great resource.
