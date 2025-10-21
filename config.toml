@@ -47,7 +47,6 @@ skip_anchor_prefixes = []
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
 
 theme_switcher = true
-default_theme = "light"
 skin = "red"
 # override_serif_with_sans = true
 
