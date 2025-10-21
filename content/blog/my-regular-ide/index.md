@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2025-10-20"
+updated="2025-10-21"
 
 [taxonomies]
 tags = ["rust", "softeng", "faq", "ide", "helix editor"]
@@ -318,10 +318,10 @@ Quite the contrary.
 
 Let's address the other two _missing features_: the file manager and git
 porcelain. Yazelix name is a portmanteau of [Yazi](https://yazi-rs.github.io/)
-and Helix. Yazi is a great TUI file manager. I do have installed but rarely use
-it. I navigate the filesystem in the terminal when I need to. From there I open
-what's needed, directly in Helix. Should I need to open more files, I rely on
-Helix file picker and fuzzy find.
+and Helix. Yazi is a great TUI file manager. I do have it installed but rarely
+use it. I navigate the filesystem in the terminal when I need to. From there I
+open what's needed, directly in Helix. Should I need to open more files, I rely
+on Helix file picker and fuzzy find.
 [Lazygit](https://github.com/jesseduffield/lazygit)? I constantly rely on it.
 
 All it takes to integrate both with Helix - provided one has previously
@@ -339,7 +339,7 @@ Side note: if you prefer [Magit](https://magit.vc/), give
 [GitUI](https://github.com/gitui-org/gitui/) instead? No problem! Just replace
 the name of the binary in that specific one liner! Easy peasy!
 
-### I Love Cats And Cappuccino
+### Catppuccin
 
 This is subjective, of course, but all it takes to theme Helix - and all of
 `rIDE` - is to install [a theme](https://catppuccin.com/ports/) and add a one
@@ -352,10 +352,11 @@ theme = "catppuccin_frappe"
 ### Amazon Q CLI
 
 I don't rely on AI too often and don't subscribe to _vibe coding_ (at all!),
-however, when using Zed I tried out AI and it was useful to some extent. I went
-from _fully skeptic_ to _cautious user_ and I still agree with most criticisms.
-Especially with the argument about _AI in the hands of a knowledgeable user vs a
-cheap lazy sod_. I do like to use [Claude Sonnet](https://claude.ai) with
+however, when using Zed I tried out AI and it was useful to some extent[^12]. I
+went from _fully skeptic_ to _cautious user_ and I still agree with most
+criticisms. Especially with the argument about _AI in the hands of a
+knowledgeable user vs a cheap lazy sod_. I do like to use
+[Claude Sonnet](https://claude.ai) with
 [Amazon Q CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) for
 small, boring, and repetitive stuff; or when I struggle with an issue for too
 long and can't understand it nor find my own solution.
@@ -503,3 +504,9 @@ Thank you so much for your time and for putting up with this. I appreciate you.
     _light entertainment_ - I don't mean this derogatorily - however, I have
     plenty respect for The Primagen story. You should make time for it and watch
     it.
+
+[^12]:
+    When relying on AI, however, I won't _just let it do stuff_. When I need
+    help to _understand an issue_ it's analysis first. In the case of _help me
+    code this_, I like
+    [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering).
