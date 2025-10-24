@@ -112,7 +112,7 @@ In an iterative process, I refactored the code and added more features. I.e:
 enabling grammatical types endpoints. I future-proofed the API to accommodate
 additional languages with minimal efforts. This may seem like a pointless
 exercise for an API this simple with no real use, however, it was as valuable to
-my learning as best practices and patterns. It also demonstrates a
+my learning as best practices and design patterns. It also demonstrates a
 forward-thinking attitude and a meticulous approach to projects. I suppose these
 are good things. Right!? 🖖🫣
 
@@ -128,11 +128,12 @@ features with confidence; almost fearlessly.
 
 All things considered, I'm very happy with this learning journey. Starting from
 a known with simple requirements was a great choice. Especially for a _curious
-as a cat always longing to know more_ person like I am. Moreover, the simple
-model opened up a plethora of possibilities beyond the MVP. _Is this enough!?_
-Nah. _Can I call myself a backend developer?_ This was the first step towards it
-and I'm way more confident and knowledgeable than when I started this project.
-So, final verdict: HELL YEAH! 🤟
+as a cat always longing to know more_ person like I am. Moreover, the
+[simple model](https://corrode.dev/blog/simple/) opened up a plethora of
+possibilities beyond the MVP. _Is this enough!?_ Nah. _Can I call myself a
+backend developer?_ This was the first step towards it and I'm way more
+confident and knowledgeable than when I started this project. So, final verdict:
+HELL YEAH! 🤟
 
 ## Disclaimers
 
@@ -140,7 +141,10 @@ I have sometime relied on Claude via
 [Amazon Q Cli](https://aws.amazon.com/developer/learning/q-developer-cli/) for
 _boring_ and repetitive stuff.
 
-I prompt engineered (meh) the API Rustdoc and both unit and integration testing.
+I prompt engineered
+[rustdoc](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html),
+[utoipa](https://crates.io/crates/utoipa) documentation, and both testing
+suites.
 
 As this was my first API, I molded the MVP on
 [Code Like a Pro in Rust](https://www.manning.com/books/code-like-a-pro-in-rust)
