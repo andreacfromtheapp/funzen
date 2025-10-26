@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2025-10-21"
+updated="2025-10-26"
 
 [taxonomies]
 tags = ["rust", "softeng", "faq", "ide", "helix editor"]
@@ -424,14 +424,33 @@ roots = ["typst.toml"]
 '"' = '"'
 ```
 
+### Markdown Oxide
+
+While Typst would work great to replace _everything writing_, I'd still like to
+rely on [Markdown Oxide](https://oxide.md/index) for
+[PKMS](https://en.wikipedia.org/wiki/Personal_knowledge_management). I've been
+fascinated by [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) and
+[Org Roam](https://www.orgroam.com/), for a while. However, I never went farther
+than using [The Archive](https://zettelkasten.de/the-archive/) app for my
+creative writings; then replaced by Obsidian. Mostly because it offers a mobile
+app - should I need to jot down a _story_ on the go - and sync. My Obsidian is
+very minimal and I rarely use it for anything else. I'm not a researcher nor an
+academic but I like things organized and systematic. I'm bringing all of this up
+to let you know that Helix does support Markdown Oxide (and
+[Marksman](https://github.com/artempyanykh/marksman)) out of the box. Preview?
+[Soon(?)](https://github.com/helix-editor/helix/discussions/11325)
+
 ### You Get The Gist
 
 I could go on about Helix languages support and how to configure them, or about
-adding more tooling to `rIDE`, but that would be pointless. Not to mention this
-story is way too long already. Therefore, I'd like to conclude by inviting you
-to try out Helix:
+adding more tooling to `rIDE`, but that would be pointless. I wanted to expand
+on the most frequent _critics_ and exemplify _my idea_ to give meaning to it
+all. Not to mention this story is way too long already. If you like the _concept
+behind rIDE_, the sky is the limit. Therefore, I'd like to conclude by inviting
+you to try out Helix, if you please:
 
-- [Helix documentation](https://docs.helix-editor.com/)
+- [Helix Documentation](https://docs.helix-editor.com/)
+- [Helix Tutorial](https://helix-editor.vercel.app/start-here/basics)
 - [Helix Golf](https://nik-rev.github.io/helix-golf/)
 
 Thank you so much for your time and for putting up with this. I appreciate you.
@@ -454,9 +473,8 @@ Thank you so much for your time and for putting up with this. I appreciate you.
 
 [^3]:
     If you are wondering: yes, Helix will eventually be extensible with
-    plugins - should you need those. It would not mean that Helix will distort
-    its core philosophy. As clarified on GitHub, in response to closed feature
-    requests.
+    plugins - should you need those. However, this would not mean that Helix
+    will distort its core philosophy.
 
 [^4]:
     The `r` in `rIDE` stands for _Regular_. It is both an inside joke for
