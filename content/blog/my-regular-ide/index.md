@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2025-10-26"
+updated="2025-10-27"
 
 [taxonomies]
 tags = ["rust", "softeng", "faq", "ide", "helix editor"]
@@ -276,8 +276,8 @@ for a few key reasons.
 
 ### GhosTTY
 
-Most Rust maximalists run with [WezTerm](https://wezterm.org/index.html). I did
-to, until I heard about [GhosTTY](https://ghostty.org/). Yazelix (and most
+Most Rust _aficionados_ run with [WezTerm](https://wezterm.org/index.html). I
+did to, until I heard about [GhosTTY](https://ghostty.org/). Yazelix (and most
 people using WezTerm) relies on [Zellij](https://zellij.dev/) to multiplex and
 resemble an IDE layout to run Helix and other tools. Whatever floats their
 boats. I did try the Zellij approach to run Helix on my own and it felt like
@@ -341,9 +341,9 @@ the name of the binary in that specific one liner! Easy peasy!
 
 ### Catppuccin
 
-This is subjective, of course, but all it takes to theme Helix - and all of
-`rIDE` - is to install [a theme](https://catppuccin.com/ports/) and add a one
-liner to `~/.config/helix/config.toml`:
+This is subjective, of course, but all it takes to theme Helix - and
+[all of `rIDE`](https://catppuccin.com/ports/) - is to choose or install a theme
+and add a one liner to `~/.config/helix/config.toml`:
 
 ```toml
 theme = "catppuccin_frappe"
@@ -472,9 +472,10 @@ Thank you so much for your time and for putting up with this. I appreciate you.
     those into a single package.
 
 [^3]:
-    If you are wondering: yes, Helix will eventually be extensible with
-    plugins - should you need those. However, this would not mean that Helix
-    will distort its core philosophy.
+    If you are wondering: yes, Helix
+    [will eventually be extensible with plugins](https://github.com/helix-editor/helix/discussions/3806) -
+    should you need those. However, this would not mean that Helix will distort
+    its core philosophy.
 
 [^4]:
     The `r` in `rIDE` stands for _Regular_. It is both an inside joke for
