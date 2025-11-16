@@ -16,7 +16,22 @@ repos:
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
 
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.19.0
     hooks:
-      - id: markdownlint-fix
+      - id: markdownlint-cli2
+        args: ["--config", ".markdownlint-cli2.yaml"]
+
+  - repo: https://github.com/opensource-nepal/commitlint
+    rev: v1.3.1
+    hooks:
+      - id: commitlint
+
+  - repo: local
+    hooks:
+      - id: kingfisher
+        name: kingfisher scan
+        description: detect secrets in your data.
+        entry: kingfisher scan --exclude public --exclude static --exclude dist --exclude src/img --no-update-check
+        language: system
+        stages: ["pre-commit", "pre-push"]
