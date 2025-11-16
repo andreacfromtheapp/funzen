@@ -398,7 +398,6 @@ args = ["--stdio"]
 [language-server.typos]
 command = "typos-lsp"
 environment = { "RUST_LOG" = "error" }
-# How typos are rendered in the editor, can be one of an Error, Warning, Info or Hint.
 config.diagnosticSeverity = "Warning" # Defaults to Warning.
 
 [language-server.tinymist]
