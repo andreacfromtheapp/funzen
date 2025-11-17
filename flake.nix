@@ -3,37 +3,46 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    self,
+  outputs = inputs @ {
+    flake-parts,
     nixpkgs,
-    flake-utils,
+    ...
   }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      devShells.default = pkgs.mkShell {
-        name = "funzenblog-dev";
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
 
-        buildInputs = with pkgs; [
-          zola
-          starship
-        ];
+      perSystem = {
+        config,
+        self',
+        inputs',
+        pkgs,
+        system,
+        ...
+      }: {
+        devShells.default = pkgs.mkShell {
+          name = "funzenxyz-dev";
 
-        shellHook = ''
-          eval "$(starship init bash)"
-          cat <<- EOF
+          buildInputs = with pkgs; [
+            zola
+            starship
+          ];
 
-          Funzen.xyz development environment :)
+          shellHook = ''
+            eval "$(starship init bash)"
+            cat <<- EOF
 
-          Quick start:
-            pre-commit install  # Set up code quality hooks
-            zola serve          # Start development server
+            Funzen.xyz development environment :)
 
-          EOF
-        '';
+            Quick start:
+              pre-commit install  # Set up code quality hooks
+              zola serve          # Start development server
+
+            EOF
+          '';
+        };
       };
-    });
+    };
 }
