@@ -146,7 +146,7 @@ I prompt engineered
 [utoipa](https://crates.io/crates/utoipa) documentation, and both testing
 suites.
 
-As this was my first API, I molded the MVP on
+As my first API, I modeled the MVP on
 [Code Like a Pro in Rust](https://www.manning.com/books/code-like-a-pro-in-rust)
 API chapter.
 
@@ -169,15 +169,15 @@ CC BY 3.0.
 [^2]:
     Truth be told, as this is my first API, I also relied on
     [Code Like a Pro in Rust](https://www.manning.com/books/code-like-a-pro-in-rust),
-    which I had previously studied and molded my initial design on its API
+    which I had previously studied and modeled my initial design on its API
     chapter.
 
 [^3]:
     Learning many ORMs, one or more for each language one uses, over just
-    learning SQL? that also grants database skills!? Nah.
+    learning SQL? That also grants you database skills!? Nah.
 
 [^4]:
     While on the methodolgies topic, I fancy the hybrid approach: the
-    convergence of DDD, TDD, BDD. Read more about in the
+    convergence of BDD, DDD, TDD. Read more about in the
     [Hybrid Development](https://dzone.com/articles/hybrid-development-with-tdd-ddd-bdd)
     paper.
