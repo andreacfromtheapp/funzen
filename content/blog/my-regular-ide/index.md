@@ -4,7 +4,7 @@ date="2025-10-20"
 updated="2025-10-27"
 
 [taxonomies]
-tags = ["rust", "softeng", "faq", "ide", "helix editor"]
+tags = ["rust", "software engineering", "faq", "ide", "helix editor"]
 
 [extra]
 toc = true

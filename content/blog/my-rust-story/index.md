@@ -3,7 +3,7 @@ title = "My Rust Story or: How I Learned to Stop Worrying and Love Rust"
 date = 2025-08-02
 
 [taxonomies]
-tags = ["rust", "rustlang", "softeng", "faq", "impostor syndrome"]
+tags = ["rust", "software engineering", "faq", "impostor syndrome"]
 
 [extra]
 toc = true

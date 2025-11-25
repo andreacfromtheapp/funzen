@@ -5,7 +5,7 @@ weight = 10
 date = 2025-10-10
 
 [taxonomies]
-tags = ["api", "rust", "rustlang", "restful"]
+tags = ["api", "rust","restful api"]
 
 [extra]
 toc = true

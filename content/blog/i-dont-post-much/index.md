@@ -3,7 +3,7 @@ title = "I don't post much. Follow me on the Fediverse."
 date = 2024-08-07
 
 [taxonomies]
-tags = ["socials", "blog", "apps", "faq"]
+tags = ["faq"]
 +++
 
 Hi!
