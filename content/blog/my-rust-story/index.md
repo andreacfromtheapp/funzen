@@ -119,7 +119,14 @@ professional Sound Designer. Because pursuing a musician career, despite
 interest from indie labels and moderate success, filled all but one of
 [Ikigai](https://en.wikipedia.org/wiki/Ikigai)'s aspects. Take a guess.[^3]
 
-{{ full_width_image(src="img/ikigai-diagram.webp", alt="Guess which one...", title="Guess which one...") }}
+<!-- prettier-ignore-start -->
+{{ full_width_image(
+    src="img/ikigai-diagram.webp",
+    alt="Guess which one...",
+    title="Guess which one..."
+    )
+}}
+<!-- prettier-ignore-end -->
 
 Besides, _“the Impostor Syndrome is strong with this one”_. _I don't know music
 theory_.
@@ -227,7 +234,14 @@ study the fundamentals. I'm going to make up for my deficiencies as much as
 humanly and reasonably possible. To be(come) a good Software Engineer, with a
 focus on Rust.
 
-{{ full_width_image(src="img/pillars.webp", alt="The pillars of good software design", title="The pillars of good software design") }}
+<!-- prettier-ignore-start -->
+{{ full_width_image(
+    src="img/pillars.webp",
+    alt="The pillars of good software design",
+    title="The pillars of good software design"
+    )
+}}
+<!-- prettier-ignore-end -->
 
 Now, could it be viable professionally? Whilst the market is _momentarily
 unfavorable_ to a beginner, Rust enables developing for a high number of
@@ -240,7 +254,7 @@ opening up to a 50 years old junior. 🤞
 
 I'm not sure there is a moral to this epic or if it is more of a cautionary
 tale. I shared a very personal journey -
-[a long excursus](https://open.spotify.com/track/1T0CdfKPKb1gJi4vCKpZ9C?si=f1bc7ae5f6b1473e) -
+[a long excursus](https://open.spotify.com/track/1T0CdfKPKb1gJi4vCKpZ9C) -
 hoping its details can help someone going through the same kind of
 _impostor-driven life_. You'd be the judge. Be kind. Please. I'm doing my best.
 Every day. Will time tell _a good story_ when it's all said and done?
@@ -289,9 +303,17 @@ they may choose.
    into traits and generics. Be up to speed with idioms, best practices, design
    patterns, anti-patterns, macros; and much more.
 
-Both from the same author, [Brenden Matthews](https://brndn.io/). I thoroughly
-enjoyed his writing and teachings style. I hope you do too. If you made it this
-far, thank you for your time.
+Both from [Brenden Matthews](https://brndn.io/). I thoroughly enjoyed his
+writing and teaching style.
+
+### Bonus book (Z2P Alternative)
+
+[Rust Servers, Services, and Apps](https://www.manning.com/books/rust-servers-services-and-apps):
+delve deep into RESTful API design and learn to implement it with Actix-web.
+Understand concurrency and parallelism. Truly understand `async` Rust with a
+practical re-implementation of its mechanisms.
+
+If you made it this far, thank you for your time.
 
 ---
 
