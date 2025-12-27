@@ -93,9 +93,9 @@ fediverse_creator = { handle = "andreacfromtheapp", domain = "c.im" }
 
 menu = [
   { name = "blog", url = "blog", trailing_slash = true },
-  { name = "archive", url = "archive", trailing_slash = true },
-  { name = "tags", url = "tags", trailing_slash = true },
+  { name = "series", url = "series", trailing_slash = true },
   { name = "projects", url = "projects", trailing_slash = true },
+  { name = "tags", url = "tags", trailing_slash = true },
   { name = "about", url = "about", trailing_slash = true },
 ]
 
@@ -117,6 +117,7 @@ footer_menu = [
   { name = "privacy", url = "privacy", trailing_slash = true },
   { name = "stats", url = "https://funzen.goatcounter.com", trailing_slash = true },
   { name = "sitemap", url = "sitemap.xml", trailing_slash = false },
+  { name = "archive", url = "archive", trailing_slash = true },
 ]
 
 # Custom security headers. What urls should your website be able to connect to?
