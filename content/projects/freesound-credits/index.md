@@ -8,7 +8,7 @@ date = 2024-08-06
 tags = ["rust", "freesound credits", "command line utilities"]
 
 [extra]
-local_image = "projects/freesound-credits/freesound-credits.webp"
+local_image = "projects/freesound-credits/noun-7787042.svg"
 canonical_url = "https://funzen.xyz/projects/freesound-credits"
 +++
 
@@ -32,6 +32,5 @@ README file.
 
 ## Credits
 
-Sound Wave image by Dwi Ridwanto from
-[Noun Project](https://thenounproject.com/browse/icons/term/sound-wave/) used
-under CC BY 3.0.
+[Sound Wave image by Dwi Ridwanto](https://thenounproject.com/icon/sound-wave-7787042/)
+from Noun Project used under CC BY 3.0.

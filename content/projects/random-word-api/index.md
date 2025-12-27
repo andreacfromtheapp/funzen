@@ -9,7 +9,7 @@ tags = ["api", "rust","restful api"]
 
 [extra]
 toc = true
-local_image = "projects/random-word-api/random-word-api.webp"
+local_image = "projects/random-word-api/noun-7325919.svg"
 canonical_url = "https://funzen.xyz/projects/random-word-api"
 +++
 
@@ -152,9 +152,8 @@ API chapter.
 
 ## Credits
 
-Translation image by Kawalan from
-[Noun Project](https://thenounproject.com/icon/translation-7325919/) used under
-CC BY 3.0.
+[Translation image by Kawalan](https://thenounproject.com/icon/translation-7325919/)
+from Noun Project used under CC BY 3.0.
 
 ---
 
