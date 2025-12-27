@@ -10,6 +10,7 @@ tags = ["api", "rust","restful api"]
 [extra]
 toc = true
 local_image = "projects/random-word-api/noun-7325919.svg"
+invertible_image = true
 canonical_url = "https://funzen.xyz/projects/random-word-api"
 +++
 

@@ -9,6 +9,7 @@ tags = ["rust", "freesound credits", "command line utilities"]
 
 [extra]
 local_image = "projects/freesound-credits/noun-7787042.svg"
+invertible_image = true
 canonical_url = "https://funzen.xyz/projects/freesound-credits"
 +++
 
