@@ -1,5 +1,5 @@
 {
-  description = "Funzen development environment";
+  description = "Zola development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -23,10 +23,12 @@
         ...
       }: {
         devShells.default = pkgs.mkShell {
-          name = "funzenxyz-dev";
+          name = "zola-dev";
 
           buildInputs = with pkgs; [
             zola
+            taplo
+            pre-commit
             starship
           ];
 
@@ -34,11 +36,7 @@
             eval "$(starship init bash)"
             cat <<- EOF
 
-            Funzen.xyz development environment :)
-
-            Quick start:
-              pre-commit install  # Set up code quality hooks
-              zola serve          # Start development server
+            Zola development environment :)
 
             EOF
           '';
