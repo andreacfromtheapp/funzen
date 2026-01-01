@@ -85,7 +85,10 @@ tag_sorting = "name" # name or frequency
 # Example: true => "Blog • ~/tabi", false => "~/tabi • Blog"
 invert_title_order = true
 
-feed_icon = true
+# The RSS icon will be shown if (1) it's enabled and (2) the following variable is set.
+# Set to true to use the default "rss" icon, or specify a custom icon name (e.g. "square-rss").
+# The icon must exist in static/social_icons/ (without the .svg extension).
+feed_icon = "square-rss"
 favicon = "img/favicon.svg"
 favicon_emoji = ""
 social_media_card = "img/aa.webp"
