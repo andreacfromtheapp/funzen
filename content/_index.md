@@ -13,4 +13,4 @@ show_projects_first = false
 +++
 
 Versatile Creative. Hobbyist [Musician](https://gentlewashrecords.com/).
-[HSP](https://hsperson.com). [Rust](https://rust-lang.org/) Software Engineer.
+[HSP](https://hsperson.com). Software Engineer.

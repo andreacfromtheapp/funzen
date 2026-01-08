@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2025-10-27"
+updated="2026-01-10"
 
 [taxonomies]
 tags = ["rust", "software engineering", "faq", "ide", "helix editor"]
@@ -262,7 +262,7 @@ shortcuts, was never an issue in the first place.
 
 By now, it should be clear that `rIDE` is _nothing new under the Sun_. The
 non-IDE concept pre-dates it. What it is, is my own approach to it and a funny -
-inside joke[^4] - name; and, of course a tooling set of choice. To wit, there
+inside joke[^4] - name; and, of course, a tooling set of choice. To wit, there
 are _distros_ for Helix too. Like
 [Yazelix](https://github.com/luccahuguet/yazelix). This is something I looked up
 and gave it a miss. I was not going down that path again. No thanks. It would
@@ -297,15 +297,16 @@ well. When it will eventually be implemented, this feature will certainly spawn
 a number of tools and pave the road for wide open possibilities. I look forward
 to it to have _native_ remote pair programming, sessions sharing, and
 communication integration. For the time being, I would like to try out
-[EtherSync](https://ethersync.github.io/ethersync/) and see how that works out.
+[Team Type](https://teamtype.github.io/teamtype/) and see how that works out.
 
 ### Fish Shell and Starship
 
 As a system administrator,
 [the command line interface is my habitat](#terminal-mon-amour). I don't need
-[a fancy shell trying too hard](https://www.nushell.sh/). I extensively used
-BASH and Zsh and lately have switched to [Fish](https://fishshell.com/) and
-[Starship](https://starship.rs/) for QoL improvements. That's plenty already.
+[a non-POSIX fancy shell trying too hard](https://www.nushell.sh/). I
+extensively used BASH and Zsh and lately have switched to
+[Fish](https://fishshell.com/) and [Starship](https://starship.rs/) for QoL
+improvements. That's plenty already.
 
 ### Helix, Of Course
 
@@ -349,22 +350,21 @@ and add a one liner to `~/.config/helix/config.toml`:
 theme = "catppuccin_frappe"
 ```
 
-### Amazon Q CLI
+### Kiro CLI
 
 I don't rely on AI too often and don't subscribe to _vibe coding_ (at all!),
 however, when using Zed I tried out AI and it was useful to some extent[^12]. I
 went from _fully skeptic_ to _cautious user_ and I still agree with most
 criticisms. Especially with the argument about _AI in the hands of a
 knowledgeable user vs a cheap lazy sod_. I do like to use
-[Claude Sonnet](https://claude.ai) with
-[Amazon Q CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) for
+[Claude Sonnet](https://claude.ai) with [Kiro CLI](https://kiro.dev/cli/) for
 small, boring, and repetitive stuff; or when I struggle with an issue for too
-long and can't understand it nor find my own solution.
+long and can't understand it/find my own solution.[^13]
 
-### Harper and Typos
+### Harper and Codebook
 
 For grammar checks and typos avoidance, [Harper](https://writewithharper.com/)
-and [Typos](https://github.com/tekumara/typos-lsp) are great. 'Nuff said.
+and [Codebook](https://github.com/blopker/codebook) are great.
 
 ### Typst
 
@@ -395,51 +395,115 @@ what: Helix supports it out of the box or with minimal tweaks.
 command = "harper-ls"
 args = ["--stdio"]
 
-[language-server.typos]
-command = "typos-lsp"
-environment = { "RUST_LOG" = "error" }
-config.diagnosticSeverity = "Warning" # Defaults to Warning.
+[language-server.codebook]
+args = ["serve"]
+command = "codebook-lsp"
 
 [language-server.tinymist]
 command = "tinymist"
 
 [[language]]
 name = "typst"
-language-servers = ["tinymist", "harper-ls", "typos"]
+language-servers = ["tinymist", "harper-ls", "codebook"]
 formatter = { command = "typstyle" }
 auto-format = true
-
-scope = "source.typst"
-file-types = ["typst", "typ"]
-comment-token = "//"
-injection-regex = "typ(st)?"
-roots = ["typst.toml"]
-
-[language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'$' = '$'
-'"' = '"'
 ```
 
-### Markdown Oxide
+### IWE
 
 While Typst would work great to replace _everything writing_, I'd still like to
-rely on [Markdown Oxide](https://oxide.md/index) for
+rely on [IWE](https://github.com/iwe-org/iwe) for
 [PKMS](https://en.wikipedia.org/wiki/Personal_knowledge_management). I've been
 fascinated by [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) and
 [Org Roam](https://www.orgroam.com/), for a while. However, I never went farther
 than using [The Archive](https://zettelkasten.de/the-archive/) app for my
-creative writings; then replaced by Obsidian. Mostly because it offers a mobile
-app - should I need to jot down a _story_ on the go - and sync. My Obsidian is
-very minimal and I rarely use it for anything else. I'm not a researcher nor an
-academic but I like things organized and systematic. I'm bringing all of this up
-to let you know that Helix does support Markdown Oxide (and
-[Marksman](https://github.com/artempyanykh/marksman)) out of the box. Preview?
-[Soon(?)](https://github.com/helix-editor/helix/discussions/11325)
+creative writings; then replaced by Obsidian. Mostly because Obsidian offers a
+mobile app with sync. I'd like to ditch Obsidian in favor of a _full Helix
+experience_, though.
 
-### You Get The Gist
+Helix easily supports IWE - install it and add a few lines. To avoid conflicts
+with my global settings, I rely on Helix local settings and a _on demand_
+bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
+
+```toml
+# my global Markdown settings
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "harper-ls", "codebook"]
+auto-format = true
+
+[language.formatter]
+args = ["--parser", "markdown", "--prose-wrap", "always"]
+command = "prettier"
+```
+
+```nix
+# my bespoke IWE Nix Flake
+{
+  description = "PKMS environment with IWE";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+  };
+
+  outputs = inputs @ {
+    flake-parts,
+    nixpkgs,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+
+      perSystem = {
+        config,
+        self',
+        inputs',
+        pkgs,
+        system,
+        ...
+      }: {
+        devShells.default = pkgs.mkShell {
+          name = "iwe-pkms";
+
+          buildInputs = with pkgs; [
+            iwe
+            harper
+            codebook
+            rumdl
+            glow
+            starship
+          ];
+
+          shellHook = ''
+            eval "$(starship init bash)"
+
+            # Create .helix directory and manage the local languages.toml
+            mkdir -p .helix
+
+            cat > .helix/languages.toml <<- EOF
+            [language-server.iwe]
+            command = "iwes"
+
+            [[language]]
+            name = "markdown"
+            language-servers = ["iwe", "harper-ls", "codebook"]
+            auto-format = true
+            EOF
+
+            cat <<- EOF
+
+            PKMS environment with https://github.com/iwe-org/iwe/blob/master/docs/index.md
+
+            EOF
+          '';
+        };
+      };
+    };
+}
+```
+
+### You Get the Gist
 
 I could go on about Helix languages support and how to configure them, or about
 adding more tooling to `rIDE`, but that would be pointless. I wanted to expand
@@ -528,3 +592,11 @@ Thank you so much for your time and for putting up with this. I appreciate you.
     help to _understand an issue_ it's analysis first. In the case of _help me
     code this_, I like
     [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering).
+
+[^13]:
+    [Enshittification](https://en.wikipedia.org/wiki/Enshittification) has
+    rendered search engines, basically, SPAM and scam engines. I begrudgingly
+    find it quicker to ask my contextualized Kiro cli - after some reading of
+    notes and bookmarked articles - to help me understanding an issue at hand.
+    Of course, with a good dose of skepticism and the proverbial _pinch of
+    salt_.

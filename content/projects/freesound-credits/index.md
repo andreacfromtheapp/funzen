@@ -5,7 +5,7 @@ weight = 30
 date = 2024-08-06
 
 [taxonomies]
-tags = ["rust", "freesound credits", "command line utilities"]
+tags = ["rust", "command line utilities"]
 
 [extra]
 local_image = "projects/freesound-credits/noun-7787042.svg"

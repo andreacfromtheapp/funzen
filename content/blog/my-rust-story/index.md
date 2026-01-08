@@ -38,7 +38,7 @@ learned programming with [BASIC](https://en.wikipedia.org/wiki/BASIC); pursued
 STEM education; majored in Computer Science. Except, I didn't. This is not my
 story.
 
-I did have an [SEGA SC-3000](https://segaretro.org/SC-3000) and, years apart, a
+I did have a [SEGA SC-3000](https://segaretro.org/SC-3000) and, years apart, a
 [Nintendo NES](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System). My
 parents [gifted me both](https://youtu.be/IagZIM9MtLo), to stop me from
 squandering money at the
@@ -218,20 +218,20 @@ love. Rust felt like the language I had been dreaming about for so long; from
 technical to
 [social aspects](https://www.rust-lang.org/policies/code-of-conduct).
 
-It combined what I loved about Elm and functional programming with what I
+It combined what I loved about functional programming with what I
 [loved about Swift](https://www.hackingwithswift.com/sixty/9/5/protocol-oriented-programming).
 It retained the
 [good bits of OOP and excluded the aspects I hated about it](https://doc.rust-lang.org/book/ch18-00-oop.html).
 It offered a complete [ecosystem](https://www.rust-lang.org/tools) allowing
-great DEX, and to avoid pointless frictions. Moreover, Rust's
+great DX, and to avoid pointless bugs and frictions. Moreover, Rust's
 [design philosophy](<https://en.wikipedia.org/wiki/Rust_(programming_language)#Syntax_and_features>)
 aligned with what I always held high in a list of fundamental characteristics.
 _Rust is **way more** than system programming!!_
 
-Rust - like Elm before - reinvigorated me[^8]. Profoundly. This time around, I'm
-going to learn more than _yet another programming language_, though. I'm gonna
-study the fundamentals. I'm going to make up for my deficiencies as much as
-humanly and reasonably possible. To be(come) a good Software Engineer, with a
+Rust - like Elm before it - reinvigorated me[^8]. Profoundly. This time around,
+I'm going to learn more than _yet another programming language_, though. I'm
+gonna study the fundamentals. I'm going to make up for my deficiencies as much
+as humanly and reasonably possible. To be(come) a good Software Engineer, with a
 focus on Rust.
 
 <!-- prettier-ignore-start -->

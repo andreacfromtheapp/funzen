@@ -207,4 +207,4 @@ domain = "www.example.com"
 [extra.hcard]
 enable = true
 avatar = "img/aa.webp"
-biography = "Versatile creative. Hobbyist musician. HSP. Rustacean. WhatevOps."
+biography = "Versatile creative. Hobbyist musician. HSP. Software Engineer."

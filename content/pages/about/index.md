@@ -7,43 +7,27 @@ path = "about"
 quick_navigation_buttons = true
 +++
 
-Self-taught engineer with an appetite for knowledge, innovation, and personal
-growth. Constantly upskilling with books, courses, and personal projects, in an
-ongoing learning effort and interest. Currently learning Computer Science and
-Software Egineering with a focus on [Rust](https://www.rust-lang.org/) and
-Rust-adjacent technologies.
-
-Passionate about [Copyleft](https://en.wikipedia.org/wiki/Copyleft),
-[Open Source](https://en.wikipedia.org/wiki/Free_and_open-source_software),
-[Creative Commons](https://en.wikipedia.org/wiki/Creative_Commons), and
-[Linux](https://en.wikipedia.org/wiki/Linux), since 2002. At first, drawn into
-it because of its ethos, philosophy, and philanthropy. Then, as a proponent,
-with writings, ideas, coding, active participation and teachings. Used to be
-part of local [LUGs](https://en.wikipedia.org/wiki/Linux_user_group) and
-OpenLabs, doing activism and education about the importance of Copyleft at
+Self-taught software engineer with an appetite for knowledge, innovation, and
+personal growth. Curious as a cat and constantly learning; in an ongoing effort
+and interest. Passionate about
+[Copyleft](https://en.wikipedia.org/wiki/Copyleft), since 2002. At first, drawn
+into it because of its ethos, philosophy, and philanthropy. Then, as a
+proponent, doing activism and education about the importance of Copyleft at
 fairs, events, and one-to-ones. Professionally since 2007.
 
-## Blockchain
-
-An akin to Open Source area of interest was the [Cardano](https://cardano.org)
-[blockchain](https://en.wikipedia.org/wiki/Blockchain). The abundant
-similarities and the same revolutionary ethos led me to partake in the Cardano
-ecosystem as a
-[stake pool operator](https://docs.cardano.org/operating-a-stake-pool/about-stake-pools/)
-since the ITN, and in the [IOHK](https://iohk.io/) official working group named
+An akin area of interest was the [Cardano](https://cardano.org)
+[blockchain](https://en.wikipedia.org/wiki/Blockchain). A similar revolutionary
+ethos led me to partake as an
+[SPO](https://docs.cardano.org/operating-a-stake-pool/about-stake-pools/), and
+later, in the [IOHK](https://iohk.io/) official working group
 [Shelley Pioneers](https://iohk.io/en/blog/posts/2020/04/29/from-byron-to-shelley-part-one-the-testnets/).
-Until, one day, I lost anything digitally relevant. Thanks to Cardano I fell in
-love with purely functional programming and got Nix-curious.
-
-With time, I grew disillusioned with blockchain and cryptocurrency promises.
-Technologically, some of them do have the potential for astounding
-infrastructural improvements; in practice we all know how that's going.
-Unfortunately: grifters, scammers, sham-philanthropists, influencers,
-shilling-driven ethos, toxic stances, and dubious political alliances, buried
-the discourse around blockchains. As well as the handful companies and projects
-(like Cardano) pursuing peer reviewed academic work, high assurance code, formal
-methods, and research driven development, under a pile of manure; laden with
-stigma, polarization, and controversy.
+Until, one day, I've lost anything digitally relevant. Thanks to Cardano I fell
+in love with
+[purely functional programming](https://en.wikipedia.org/wiki/Purely_functional_programming)
+and [NixOS](https://en.wikipedia.org/wiki/NixOS). With time, I grew
+disillusioned with blockchain and cryptocurrency promises. Technologically, some
+of them do have the potential for astounding infrastructural improvements; in
+practice we all know how that's going.
 
 ## Music
 
