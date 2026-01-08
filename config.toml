@@ -111,7 +111,7 @@ full_content_in_feed = true
 socials = [
   { name = "GitHub", url = "https://github.com/andreacfromtheapp/", icon = "github-square" },
   { name = "LinkedIn", url = "https://www.linkedin.com/in/andreacallea", icon = "linkedin-square" },
-  { name = "Mastodon", url = "https://c.im/@andreacfromtheapp", icon = "mastodon" },
+  { name = "Mastodon", url = "https://c.im/@andreacfromtheapp", icon = "mastodon-square" },
   # { name = "Pixelfed", url = "https://gram.social/i/web/profile/791291086346482905", icon = "pixelfed" },
   # { name = "PeerTube", url = "https://makertube.net/a/gentlewash/video-channels", icon = "peertube" },
 ]
