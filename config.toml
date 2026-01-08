@@ -79,7 +79,7 @@ short_date_format = ""
 # Default: tag_name – n post[s]
 # Compact: tag_name^n (superscript number)
 compact_tags = true
-tag_sorting = "name" # name or frequency
+tag_sorting = "frequency" # name or frequency
 
 # Invert the order of the site title and page title in the browser tab.
 # Example: true => "Blog • ~/tabi", false => "~/tabi • Blog"
