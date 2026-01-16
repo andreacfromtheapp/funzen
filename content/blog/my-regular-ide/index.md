@@ -425,20 +425,7 @@ Helix easily supports IWE - install it and add a few lines. To avoid conflicts
 with my global settings, I rely on Helix local settings and a _on demand_
 bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
 
-```toml
-# my global Markdown settings
-[[language]]
-name = "markdown"
-language-servers = ["marksman", "harper-ls", "codebook"]
-auto-format = true
-
-[language.formatter]
-args = ["--parser", "markdown", "--prose-wrap", "always"]
-command = "prettier"
-```
-
 ```nix
-# my bespoke IWE Nix Flake
 {
   description = "PKMS environment with IWE";
 
@@ -470,8 +457,7 @@ command = "prettier"
             iwe
             harper
             codebook
-            rumdl
-            glow
+            mpls
             starship
           ];
 
@@ -482,12 +468,33 @@ command = "prettier"
             mkdir -p .helix
 
             cat > .helix/languages.toml <<- EOF
+            [language-server.harper-ls]
+            command = "harper-ls"
+            args = ["--stdio"]
+
+            [language-server.codebook]
+            command = "codebook-lsp"
+            args = ["serve"]
+
+            [language-server.mpls]
+            command="mpls"
+            args = [
+              "--browser",
+              "duckduckgo",
+              "--no-auto",
+              "--full-sync",
+              "--enable-emoji",
+              "--enable-footnotes",
+              "--code-style",
+              "catppuccin-macchiato",
+            ]
+
             [language-server.iwe]
             command = "iwes"
 
             [[language]]
             name = "markdown"
-            language-servers = ["iwe", "harper-ls", "codebook"]
+            language-servers = ["iwe", "harper-ls", "codebook", "mpls"]
             auto-format = true
             EOF
 
