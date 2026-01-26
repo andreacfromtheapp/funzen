@@ -1,6 +1,6 @@
 ﻿+++
 title = "Random Word API"
-description = "Dictionary RESTful API returning a random word. Learning project and demo."
+description = "Dictionary restful API returning a random word. Learning project and demo."
 weight = 10
 date = 2025-10-10
 
@@ -23,7 +23,7 @@ time, I made a little demo for junior job interviews. A
 [Speak and Spell](https://github.com/andreacfromtheapp/elm_speakandspell)
 _clone_. It used [an API](https://github.com/mcnaveen/random-words-api) that
 closed the spigot (presumably costs?). This is to say that, when I needed an
-itch to learn RESTful API development, I had a hole to fill in and somewhere to
+itch to learn restful API development, I had a hole to fill in and somewhere to
 start from.
 
 To keep this summary of my learning brief, I've only reported the main points to
@@ -33,9 +33,9 @@ point list. A technical learning summary is available in the
 README file. I hope you like it as much as I loved learning with this project!
 ❤️🦀
 
-## What This Is
+## What this Is
 
-A [RESTful API](https://restfulapi.net/) built with
+A [restful API](https://restfulapi.net/) built with
 [Axum](https://github.com/tokio-rs/axum) in Rust and a personal project to dive
 deep into web service development. A simple, straightforward showcase of
 technical skill and learning – built to demonstrate capability at job
@@ -87,7 +87,7 @@ but what would have given in terms of learning? Moreover, I like SQL. I'll take
 SQL and rely on [SQLx](https://crates.io/crates/sqlx) guarantees over learning
 and using ORMs[^3], any day of the week!
 
-## Beyond The Basics
+## Beyond the Basics
 
 The model, simple by design, fulfilled all app's requirements and it allowed for
 a broader learning scope. Once I had an
@@ -98,7 +98,7 @@ and [https://rust-api.dev/](https://rust-api.dev/). Besides, I recalled that the
 OG API, had these weird `@swagger` comments: "_what are these!? - Put a pin on
 them_".
 
-All great pointers I needed to delve deep into. To extend my learning and
+All great pointers I wanted to delve deep into. To extend my learning and
 improve my API:
 [middleware pattern](https://rust-api.dev/docs/part-1/tokio-hyper-axum/#the-middleware-pattern),
 authentication, authorization,
@@ -117,14 +117,6 @@ my learning as best practices and design patterns. It also demonstrates a
 forward-thinking attitude and a meticulous approach to projects. I suppose these
 are good things. Right!? 🖖🫣
 
-## TDD Is Not Dead
-
-All code beyond the MVP, relied on
-[TDD](https://en.wikipedia.org/wiki/Test-driven_development). Many confidently
-assert that TDD is dead, or that it was a mistake. I find it invaluable[^4] once
-the _core of the code_ is in place. It greatly helps refactoring and adding new
-features with confidence; almost fearlessly.
-
 ## Conclusion
 
 All things considered, I'm very happy with this learning journey. Starting from
@@ -139,7 +131,7 @@ HELL YEAH! 🤟
 ## Disclaimers
 
 I have sometime relied on Claude via
-[Amazon Q Cli](https://aws.amazon.com/developer/learning/q-developer-cli/) for
+[Amazon Q CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) for
 _boring_ and repetitive stuff.
 
 I prompt engineered
@@ -175,9 +167,3 @@ from Noun Project used under CC BY 3.0.
 [^3]:
     Learning many ORMs, one or more for each language one uses, over just
     learning SQL? That also grants you database skills!? Nah.
-
-[^4]:
-    While on the methodolgies topic, I fancy the hybrid approach: the
-    convergence of BDD, DDD, TDD. Read more about in the
-    [Hybrid Development](https://dzone.com/articles/hybrid-development-with-tdd-ddd-bdd)
-    paper.
