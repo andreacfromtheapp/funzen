@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2026-01-10"
+updated="2026-01-27"
 
 [taxonomies]
 tags = ["rust", "software engineering", "faq", "ide", "helix editor"]
@@ -274,24 +274,24 @@ and differences with Yazelix. The most important is definitely the terminal
 emulator. This is where everything runs, after all. I made a different choice,
 for a few key reasons.
 
-### GhosTTY
+### Ghostty
 
 Most Rust _aficionados_ run with [WezTerm](https://wezterm.org/index.html). I
-did to, until I heard about [GhosTTY](https://ghostty.org/). Yazelix (and most
+did to, until I heard about [Ghostty](https://ghostty.org/). Yazelix (and most
 people using WezTerm) relies on [Zellij](https://zellij.dev/) to multiplex and
 resemble an IDE layout to run Helix and other tools. Whatever floats their
 boats. I did try the Zellij approach to run Helix on my own and it felt like
 [a GUI editor all over again](#guisclaimer). 😱
 
-GhosTTY has many other great qualities that made me prefer it. Above all, it
+Ghostty has many other great qualities that made me prefer it. Above all, it
 behaves natively on all platforms. Using the same keystrokes and macros on my
 [ZSA Voyager](https://youtu.be/dg2TT1OJlQs) (with
 [Colemak DHm](https://colemakmods.github.io/mod-dh/)) in all of my terminal
-based environment is a huge plus. Besides, GhosTTY ships with clever split
+based environment is a huge plus. Besides, Ghostty ships with clever split
 functionality and great tabs management.
 
-Final note on Zellij: I'd still use it instead of tmux for system administration
-on a daily basis. Until: GhosTTY delivers on
+Final note on Zellij: I'd still use it in lieu of tmux for multiplexing tasks on
+a daily basis. Until: Ghostty delivers on
 [its promise to revolutionize multiplexing](https://youtu.be/o-qtso47ECk) as
 well. When it will eventually be implemented, this feature will certainly spawn
 a number of tools and pave the road for wide open possibilities. I look forward
@@ -301,19 +301,21 @@ communication integration. For the time being, I would like to try out
 
 ### Fish Shell and Starship
 
-As a system administrator,
-[the command line interface is my habitat](#terminal-mon-amour). I don't need
-[a non-POSIX fancy shell trying too hard](https://www.nushell.sh/). I
-extensively used BASH and Zsh and lately have switched to
-[Fish](https://fishshell.com/) and [Starship](https://starship.rs/) for QoL
-improvements. That's plenty already.
+As an ex-system-administrator,
+[the CLI is my preferred habitat](#terminal-mon-amour). I don't need a
+[non-POSIX](https://en.wikipedia.org/wiki/POSIX)
+[fancy shell trying too hard](https://www.nushell.sh/). I extensively used BASH
+and Zsh. So, lately, I've switched to [Fish](https://fishshell.com/) and
+[Starship](https://starship.rs/) for QoL improvements. That's plenty already.
 
-### Helix, Of Course
+### Helix, of Course
 
-This should go without saying, however, it is worth mentioning for a reason: why
-run a terminal emulator within a terminal text editor within a terminal
-emulator; when you can run Helix within GhosTTY and that's it? Missing feature?
-Quite the contrary.
+This should go without saying, however, it's worth mentioning for a reason:
+running a terminal emulator within a terminal text editor (within a terminal
+multiplexer) within a terminal emulator seems too convoluted and inefficient.
+Especially if you can just run Helix in a Ghostty tab, and rely on the latter
+for terminal tabs or splits for any task you'd run in a terminal. And that's it.
+_Missing feature_?! Quite the contrary.
 
 ### Yazi and Lazygit
 
@@ -347,7 +349,7 @@ This is subjective, of course, but all it takes to theme Helix - and
 and add a one liner to `~/.config/helix/config.toml`:
 
 ```toml
-theme = "catppuccin_frappe"
+theme = "catppuccin_macchiato"
 ```
 
 ### Kiro CLI
