@@ -515,17 +515,18 @@ bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
 ### You Get the Gist
 
 I could go on about Helix languages support and how to configure them, or about
-adding more tooling to `rIDE`, but that would be pointless. I wanted to expand
-on the most frequent _critics_ and exemplify _my idea_ to give meaning to it
-all. Not to mention this story is way too long already. If you like the _concept
-behind rIDE_, the sky is the limit. Therefore, I'd like to conclude by inviting
-you to try out Helix, if you please:
+adding more tooling to `rIDE`, but that would be pointless. In sharing all this,
+I just wanted to counter frequent criticisms and exemplify _my idea_ to give
+meaning to it all. If you like the _concept of a modular IDE_, hereby presented
+as _rIDE_, the sky is the limit. Whether you do or don't, I'd like to invite you
+to try out Helix, if you please:
 
 - [Helix Documentation](https://docs.helix-editor.com/)
 - [Helix Tutorial](https://helix-editor.vercel.app/start-here/basics)
 - [Helix Golf](https://nik-rev.github.io/helix-golf/)
+- [Helix Editor Tutorial Series](https://youtube.com/playlist?list=PL4AR7tbGuBH5AzV0tPpTfYgGIF5vk3HN2)
 
-Thank you so much for your time and for putting up with this. I appreciate you.
+Thank you so much for your time, I appreciate you.
 
 🍻🚌
 
