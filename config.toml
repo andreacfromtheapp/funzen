@@ -385,21 +385,21 @@ copyright = "© $CURRENT_YEAR Andrea C $SEPARATOR Unless otherwise noted, the co
 iine = true
 iine_unified_languages = true
 
-[extra.giscus]
-enabled_for_all_posts = true
-automatic_loading = true
-repo = "andreacfromtheapp/funzen"
-repo_id = "R_kgDOLoVY-w"
-category = "Announcements"
-category_id = "DIC_kwDOLoVY-84Chc2K"
-mapping = "slug"
-strict_title_matching = 1
-enable_reactions = 1
-comment_box_above_comments = true
-light_theme = "noborder_light"
-dark_theme = "noborder_dark"
-lang = ""                            # Leave blank to match the page's language.
-lazy_loading = true
+# [extra.giscus]
+# enabled_for_all_posts = true
+# automatic_loading = true
+# repo = "andreacfromtheapp/funzen"
+# repo_id = "R_kgDOLoVY-w"
+# category = "Announcements"
+# category_id = "DIC_kwDOLoVY-84Chc2K"
+# mapping = "slug"
+# strict_title_matching = 1
+# enable_reactions = 1
+# comment_box_above_comments = true
+# light_theme = "noborder_light"
+# dark_theme = "noborder_dark"
+# lang = "" # Leave blank to match the page's language.
+# lazy_loading = true
 
 [extra.analytics]
 # Supported options: ["goatcounter", "umami", "plausible"]
