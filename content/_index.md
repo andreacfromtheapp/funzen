@@ -12,5 +12,6 @@ max_projects = 3
 show_projects_first = false
 +++
 
-Versatile Creative. Hobbyist [Musician](https://gentlewashrecords.com/).
-[HSP](https://hsperson.com). Software Engineer.
+Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer.
+Hobbyist Photographer. [HSP](https://hsperson.com). Misfit. Idealist. Weirdo.
+Aspiring Rustacean. DADA.

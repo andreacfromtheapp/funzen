@@ -3,7 +3,7 @@ base_url = "https://funzen.xyz/"
 
 # The site title and description; used in feeds by default.
 title = "~/funzen"
-description = "Andrea C Home Page"
+description = "Andrea C. Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer. Hobbyist Photographer. HSP. Misfit. Idealist. Weirdo. Aspiring Rustacean. DADA."
 
 # The default language; used in feeds.
 default_language = "en"
@@ -301,7 +301,7 @@ invert_title_order = true
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set.
 # Set to true to use the default "rss" icon, or specify a custom icon name (e.g. "square-rss").
 # The icon must exist in static/social_icons/ (without the .svg extension).
-feed_icon = "square-rss"
+# feed_icon = "square-rss"
 favicon = "img/favicon.svg"
 favicon_emoji = ""
 social_media_card = "img/aa.webp"
@@ -322,11 +322,14 @@ full_content_in_feed = true
 # email = "YW5kcmVhLmNhbGxlYUBwbS5tZQ=="
 
 socials = [
-  { name = "GitHub", url = "https://github.com/andreacfromtheapp/", icon = "github-square" },
-  { name = "LinkedIn", url = "https://www.linkedin.com/in/andreacallea", icon = "linkedin-square" },
-  { name = "Mastodon", url = "https://c.im/@andreacfromtheapp", icon = "mastodon-square" },
+  { name = "Codeberg", url = "https://codeberg.org/andreacfromtheapp/", icon = "codeberg" },
+  { name = "Mastodon", url = "https://c.im/@andreacfromtheapp", icon = "mastodon" },
+  { name = "GitHub", url = "https://github.com/andreacfromtheapp/", icon = "github" },
+  { name = "LinkedIn", url = "https://www.linkedin.com/in/andreacallea", icon = "linkedin" },
   # { name = "Pixelfed", url = "https://gram.social/i/web/profile/791291086346482905", icon = "pixelfed" },
   # { name = "PeerTube", url = "https://makertube.net/a/gentlewash/video-channels", icon = "peertube" },
+  { name = "Music", url = "https://gentlewashrecords.com/", icon = "circle-play" },
+  { name = "Vimeo", url = "https://vimeo.com/earlistensound", icon = "vimeo" },
 ]
 
 footer_menu = [
@@ -420,4 +423,4 @@ domain = "www.example.com"
 [extra.hcard]
 enable = true
 avatar = "img/aa.webp"
-biography = "Versatile creative. Hobbyist musician. HSP. Software Engineer."
+biography = "Andrea C. Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer. Hobbyist Photographer. HSP. Misfit. Idealist. Weirdo. Aspiring Rustacean. DADA."
