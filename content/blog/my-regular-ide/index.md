@@ -411,10 +411,10 @@ formatter = { command = "typstyle" }
 auto-format = true
 ```
 
-### IWE
+### Markdown Oxide
 
 While Typst would work great to replace _everything writing_, I'd still like to
-rely on [IWE](https://github.com/iwe-org/iwe) for
+rely on [Markdown Oxide](https://oxide.md) for
 [PKMS](https://en.wikipedia.org/wiki/Personal_knowledge_management). I've been
 fascinated by [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) and
 [Org Roam](https://www.orgroam.com/), for a while. However, I never went farther
@@ -423,91 +423,96 @@ creative writings; then replaced by Obsidian. Mostly because Obsidian offers a
 mobile app with sync. I'd like to ditch Obsidian in favor of a _full Helix
 experience_, though.
 
-Helix easily supports IWE - install it and add a few lines. To avoid conflicts
-with my global settings, I rely on Helix local settings and a _on demand_
-bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
+Helix easily supports Markdown Oxide - install it and add a few lines. To avoid
+conflicts with my global settings, I rely on Helix local settings and a _on
+demand_ bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
 
 ```nix
 {
-  description = "PKMS environment with IWE";
+  description = "PKMS environment with Markdown Oxide";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = inputs @ {
-    flake-parts,
-    nixpkgs,
-    ...
-  }:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+  outputs =
+    inputs@{
+      flake-parts,
+      nixpkgs,
+      ...
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
 
-      perSystem = {
-        config,
-        self',
-        inputs',
-        pkgs,
-        system,
-        ...
-      }: {
-        devShells.default = pkgs.mkShell {
-          name = "iwe-pkms";
+      perSystem =
+        {
+          config,
+          self',
+          inputs',
+          pkgs,
+          system,
+          ...
+        }:
+        {
+          devShells.default = pkgs.mkShell {
+            name = "oxide-pkms";
 
-          buildInputs = with pkgs; [
-            iwe
-            harper
-            codebook
-            mpls
-            starship
-          ];
+            buildInputs = with pkgs; [
+              harper
+              codebook
+              markdown-oxide
+              mpls
+              starship
+            ];
 
-          shellHook = ''
-            eval "$(starship init bash)"
+            shellHook = ''
+              eval "$(starship init bash)"
 
-            # Create .helix directory and manage the local languages.toml
-            mkdir -p .helix
+              # Create .helix directory and manage the local languages.toml
+              mkdir -p .helix
 
-            cat > .helix/languages.toml <<- EOF
-            [language-server.harper-ls]
-            command = "harper-ls"
-            args = ["--stdio"]
+              cat > .helix/languages.toml <<- EOF
+              [language-server.harper-ls]
+              command = "harper-ls"
+              args = ["--stdio"]
 
-            [language-server.codebook]
-            command = "codebook-lsp"
-            args = ["serve"]
+              [language-server.codebook]
+              command = "codebook-lsp"
+              args = ["serve"]
 
-            [language-server.mpls]
-            command="mpls"
-            args = [
-              "--browser",
-              "duckduckgo",
-              "--no-auto",
-              "--full-sync",
-              "--enable-emoji",
-              "--enable-footnotes",
-              "--code-style",
-              "catppuccin-macchiato",
-            ]
+              [language-server.mpls]
+              command="mpls"
+              args = [
+                "--browser",
+                "duckduckgo",
+                "--no-auto",
+                "--full-sync",
+                "--enable-emoji",
+                "--enable-footnotes",
+                "--code-style",
+                "catppuccin-macchiato",
+              ]
 
-            [language-server.iwe]
-            command = "iwes"
+              [[language]]
+              name = "markdown"
+              language-servers = ["markdown-oxide", "harper-ls", "codebook", "mpls"]
+              auto-format = true
+              EOF
 
-            [[language]]
-            name = "markdown"
-            language-servers = ["iwe", "harper-ls", "codebook", "mpls"]
-            auto-format = true
-            EOF
+              cat <<- EOF
 
-            cat <<- EOF
+              PKMS environment with https://oxide.md
 
-            PKMS environment with https://github.com/iwe-org/iwe/blob/master/docs/index.md
-
-            EOF
-          '';
+              EOF
+            '';
+          };
         };
-      };
     };
 }
 ```
