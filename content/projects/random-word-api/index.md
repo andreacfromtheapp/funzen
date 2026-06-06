@@ -20,7 +20,7 @@ Four years ago, I learned frontend development and I really wanted a career with
 [Elm](https://elm-lang.org/)[^1]. You can read more about this in
 [My Rust Story](/blog/my-rust-story/#learning-web-development) blogpost. At the
 time, I made a little demo for junior job interviews. A
-[Speak and Spell](https://github.com/andreacfromtheapp/elm_speakandspell)
+[Speak and Spell](https://codeberg.org/andreacfromtheapp/elm_speakandspell)
 _clone_. It used [an API](https://github.com/mcnaveen/random-words-api) that
 closed the spigot (presumably costs?). This is to say that, when I needed an
 itch to learn restful API development, I had a hole to fill in and somewhere to
@@ -29,7 +29,7 @@ start from.
 To keep this summary of my learning brief, I've only reported the main points to
 highlight the reasoning behind the process; rather than using a lengthy bullet
 point list. A technical learning summary is available in the
-[Random Word API repository](https://github.com/andreacfromtheapp/random-word-api)
+[Random Word API repository](https://codeberg.org/andreacfromtheapp/random-word-api)
 README file. I hope you like it as much as I loved learning with this project!
 ❤️🦀
 
@@ -45,14 +45,14 @@ into a comprehensive learning experience.
 
 ## Demo It
 
-You can check [the demo](https://word-api-axum.netlify.app/), browse the
-[source code](https://github.com/andreacfromtheapp/random-word-api), and
-[run it with Docker](https://github.com/andreacfromtheapp/random-word-api?tab=readme-ov-file#docker-compose).
+You can ~~check [the demo](https://word-api-axum.netlify.app/)~~, browse the
+[source code](https://codeberg.org/andreacfromtheapp/random-word-api), and
+[run it with Docker](https://codeberg.org/andreacfromtheapp/random-word-api?tab=readme-ov-file#docker-compose).
 
-Note that the free tier I'm using shuts down after some time of inactivity or
+~~Note that the free tier I'm using shuts down after some time of inactivity or
 stop serving entirely if quota is reached. You may experience slow loading times
 or no demo at all. In the latter case, you could run the demo in Docker. My
-apologies.
+apologies.~~
 
 ## KISS
 
@@ -62,7 +62,7 @@ test against. The OG API used a very small response. I treated it as a black box
 to reverse engineer. A methodology I find best suited for learning[^2]: it
 forces one to _think hard_ while offering a safety net. Thus, I started from the
 response I was
-[already decoding in Elm](https://github.com/andreacfromtheapp/elm_speakandspell/blob/main/src/elm/SpeakAndSpell.elm#L202-L207):
+[already decoding in Elm](https://codeberg.org/andreacfromtheapp/elm_speakandspell/src/branch/main/src/elm/SpeakAndSpell.elm#L202-L207):
 
 ```json
 <!-- An actual response from my Random Word API -->
@@ -105,7 +105,7 @@ authentication, authorization,
 [JWT token](https://www.jwt.io/introduction#what-is-json-web-token),
 [OWASP](https://owasp.org/www-project-secure-headers/) OHSP recommendations, and
 [OpenAPI](https://www.openapis.org/) documentation. Besides
-[everything else](https://github.com/andreacfromtheapp/random-word-api?tab=readme-ov-file#technical-learning-summary).
+[everything else](https://codeberg.org/andreacfromtheapp/random-word-api?tab=readme-ov-file#technical-learning-summary).
 
 ## Iterate Iterate Iterate
 
