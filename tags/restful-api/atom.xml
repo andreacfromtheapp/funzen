@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://funzen.xyz/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;funzen.xyz&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>restful api</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://funzen.xyz/skins/red.css?h=3c0e688fbc84585f72ba" /><title>~/funzen - restful api</title>
+        <subtitle>Andrea C. Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer. Hobbyist Photographer. HSP. Misfit. Idealist. Weirdo. Aspiring Rustacean. DADA.</subtitle>
+    <link href="https://funzen.xyz/tags/restful-api/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://funzen.xyz/tags/restful-api/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-10-10T00:00:00+00:00</updated><id>https://funzen.xyz/tags/restful-api/atom.xml</id><entry xml:lang="en">
+        <title>Random Word API</title>
+        <published>2025-10-10T00:00:00+00:00</published>
+        <updated>2025-10-10T00:00:00+00:00</updated>
+        <author>
+            <name>Andrea C</name>
+        </author>
+        <link rel="alternate" href="https://funzen.xyz/projects/random-word-api/" type="text/html"/>
+        <id>https://funzen.xyz/projects/random-word-api/</id>
+        
+            <content type="html">&lt;h2 id=&quot;premise&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#premise&quot; aria-label=&quot;Anchor link for: premise&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Premise&lt;&#x2F;h2&gt;
+&lt;p&gt;Four years ago, I learned frontend development and I really wanted a career with
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;elm-lang.org&#x2F;&quot;&gt;Elm&lt;&#x2F;a&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. You can read more about this in
+&lt;a href=&quot;&#x2F;blog&#x2F;my-rust-story&#x2F;#learning-web-development&quot;&gt;My Rust Story&lt;&#x2F;a&gt; blogpost. At the
+time, I made a little demo for junior job interviews. A
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;elm_speakandspell&quot;&gt;Speak and Spell&lt;&#x2F;a&gt;
+&lt;em&gt;clone&lt;&#x2F;em&gt;. It used &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mcnaveen&#x2F;random-words-api&quot;&gt;an API&lt;&#x2F;a&gt; that
+closed the spigot (presumably costs?). This is to say that, when I needed an
+itch to learn restful API development, I had a hole to fill in and somewhere to
+start from.&lt;&#x2F;p&gt;
+&lt;p&gt;To keep this summary of my learning brief, I’ve only reported the main points to
+highlight the reasoning behind the process; rather than using a lengthy bullet
+point list. A technical learning summary is available in the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;random-word-api&quot;&gt;Random Word API repository&lt;&#x2F;a&gt;
+README file. I hope you like it as much as I loved learning with this project!
+❤️🦀&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-this-is&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#what-this-is&quot; aria-label=&quot;Anchor link for: what-this-is&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+What this Is&lt;&#x2F;h2&gt;
+&lt;p&gt;A &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;restfulapi.net&#x2F;&quot;&gt;restful API&lt;&#x2F;a&gt; built with
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tokio-rs&#x2F;axum&quot;&gt;Axum&lt;&#x2F;a&gt; in Rust and a personal project to dive
+deep into web service development. A simple, straightforward showcase of
+technical skill and learning – built to demonstrate capability at job
+interviews. Because I really want a career with Rust. As per premise: this API
+was primarily designed to support my Speak and Spell clone. Then, it evolved
+into a comprehensive learning experience.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;demo-it&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#demo-it&quot; aria-label=&quot;Anchor link for: demo-it&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Demo It&lt;&#x2F;h2&gt;
+&lt;p&gt;You can &lt;del&gt;check &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;word-api-axum.netlify.app&#x2F;&quot;&gt;the demo&lt;&#x2F;a&gt;&lt;&#x2F;del&gt;, browse the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;random-word-api&quot;&gt;source code&lt;&#x2F;a&gt;, and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;random-word-api?tab=readme-ov-file#docker-compose&quot;&gt;run it with Docker&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;del&gt;Note that the free tier I’m using shuts down after some time of inactivity or
+stop serving entirely if quota is reached. You may experience slow loading times
+or no demo at all. In the latter case, you could run the demo in Docker. My
+apologies.&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kiss&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#kiss&quot; aria-label=&quot;Anchor link for: kiss&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+KISS&lt;&#x2F;h2&gt;
+&lt;p&gt;I knew I needed to devise the same model and response of the OG API, as a
+starting point, so I could use my existing app as a &lt;em&gt;real world scenario&lt;&#x2F;em&gt; to
+test against. The OG API used a very small response. I treated it as a black box
+to reverse engineer. A methodology I find best suited for learning&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;: it
+forces one to &lt;em&gt;think hard&lt;&#x2F;em&gt; while offering a safety net. Thus, I started from the
+response I was
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;elm_speakandspell&#x2F;src&#x2F;branch&#x2F;main&#x2F;src&#x2F;elm&#x2F;SpeakAndSpell.elm#L202-L207&quot;&gt;already decoding in Elm&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&amp;lt;!-- An actual response from my Random Word API --&amp;gt;
+[
+  {
+    &amp;quot;word&amp;quot;: &amp;quot;unknown&amp;quot;,
+    &amp;quot;definition&amp;quot;: &amp;quot;not known or identified&amp;quot;,
+    &amp;quot;pronunciation&amp;quot;: &amp;quot;&amp;#x2F;ʌnˈnoʊn&amp;#x2F;&amp;quot;
+  }
+]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;the-database&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-database&quot; aria-label=&quot;Anchor link for: the-database&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The Database&lt;&#x2F;h2&gt;
+&lt;p&gt;I chose to use SQLite. It still offered good learning opportunities, both for
+the API and Rust tooling, so I was happy with going down this path. In
+preparation for the demo, it also meant running one less service (PostgreSQL) I
+can’t afford at the moment.&lt;&#x2F;p&gt;
+&lt;p&gt;The OG API adopted data in JSON files. That could have been easier to implement,
+but what would have given in terms of learning? Moreover, I like SQL. I’ll take
+SQL and rely on &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;sqlx&quot;&gt;SQLx&lt;&#x2F;a&gt; guarantees over learning
+and using ORMs&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-3-1&quot;&gt;&lt;a href=&quot;#fn-3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, any day of the week!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;beyond-the-basics&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#beyond-the-basics&quot; aria-label=&quot;Anchor link for: beyond-the-basics&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Beyond the Basics&lt;&#x2F;h2&gt;
+&lt;p&gt;The model, simple by design, fulfilled all app’s requirements and it allowed for
+a broader learning scope. Once I had an
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Minimum_viable_product&quot;&gt;MVP&lt;&#x2F;a&gt; in place, I sought
+to learn and to implement more. I stumbled upon two great resources that
+provided guidance and ideas: &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;restfulapi.net&#x2F;&quot;&gt;https:&#x2F;&#x2F;restfulapi.net&#x2F;&lt;&#x2F;a&gt;
+and &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;rust-api.dev&#x2F;&quot;&gt;https:&#x2F;&#x2F;rust-api.dev&#x2F;&lt;&#x2F;a&gt;. Besides, I recalled that the
+OG API, had these weird &lt;code&gt;@swagger&lt;&#x2F;code&gt; comments: “&lt;em&gt;what are these!? - Put a pin on
+them&lt;&#x2F;em&gt;”.&lt;&#x2F;p&gt;
+&lt;p&gt;All great pointers I wanted to delve deep into. To extend my learning and
+improve my API:
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;rust-api.dev&#x2F;docs&#x2F;part-1&#x2F;tokio-hyper-axum&#x2F;#the-middleware-pattern&quot;&gt;middleware pattern&lt;&#x2F;a&gt;,
+authentication, authorization,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.jwt.io&#x2F;introduction#what-is-json-web-token&quot;&gt;JWT token&lt;&#x2F;a&gt;,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;owasp.org&#x2F;www-project-secure-headers&#x2F;&quot;&gt;OWASP&lt;&#x2F;a&gt; OHSP recommendations, and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.openapis.org&#x2F;&quot;&gt;OpenAPI&lt;&#x2F;a&gt; documentation. Besides
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;andreacfromtheapp&#x2F;random-word-api?tab=readme-ov-file#technical-learning-summary&quot;&gt;everything else&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;iterate-iterate-iterate&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#iterate-iterate-iterate&quot; aria-label=&quot;Anchor link for: iterate-iterate-iterate&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Iterate Iterate Iterate&lt;&#x2F;h2&gt;
+&lt;p&gt;In an iterative process, I refactored the code and added more features. I.e:
+enabling grammatical types endpoints. I future-proofed the API to accommodate
+additional languages with minimal efforts. This may seem like a pointless
+exercise for an API this simple with no real use, however, it was as valuable to
+my learning as best practices and design patterns. It also demonstrates a
+forward-thinking attitude and a meticulous approach to projects. I suppose these
+are good things. Right!? 🖖🫣&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;All things considered, I’m very happy with this learning journey. Starting from
+a known with simple requirements was a great choice. Especially for a &lt;em&gt;curious
+as a cat always longing to know more&lt;&#x2F;em&gt; person like I am. Moreover, the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;corrode.dev&#x2F;blog&#x2F;simple&#x2F;&quot;&gt;simple model&lt;&#x2F;a&gt; opened up a plethora of
+possibilities beyond the MVP. &lt;em&gt;Is this enough!?&lt;&#x2F;em&gt; Nah. &lt;em&gt;Can I call myself a
+backend developer?&lt;&#x2F;em&gt; This was the first step towards it and I’m way more
+confident and knowledgeable than when I started this project. So, final verdict:
+HELL YEAH! 🤟&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;disclaimers&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#disclaimers&quot; aria-label=&quot;Anchor link for: disclaimers&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Disclaimers&lt;&#x2F;h2&gt;
+&lt;p&gt;I have sometime relied on Claude via
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;aws.amazon.com&#x2F;developer&#x2F;learning&#x2F;q-developer-cli&#x2F;&quot;&gt;Amazon Q CLI&lt;&#x2F;a&gt; for
+&lt;em&gt;boring&lt;&#x2F;em&gt; and repetitive stuff.&lt;&#x2F;p&gt;
+&lt;p&gt;I prompt engineered
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rustdoc&#x2F;what-is-rustdoc.html&quot;&gt;rustdoc&lt;&#x2F;a&gt;,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;utoipa&quot;&gt;utoipa&lt;&#x2F;a&gt; documentation, and both testing
+suites.&lt;&#x2F;p&gt;
+&lt;p&gt;As my first API, I modeled the MVP on
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.manning.com&#x2F;books&#x2F;code-like-a-pro-in-rust&quot;&gt;Code Like a Pro in Rust&lt;&#x2F;a&gt;
+API chapter.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;credits&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#credits&quot; aria-label=&quot;Anchor link for: credits&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Credits&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;thenounproject.com&#x2F;icon&#x2F;translation-7325919&#x2F;&quot;&gt;Translation image by Kawalan&lt;&#x2F;a&gt;
+from Noun Project used under CC BY 3.0.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;footer class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;I’m sure you are aware of
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;elm-lang.org&#x2F;news&#x2F;compiler-errors-for-humans&quot;&gt;Elm influence&lt;&#x2F;a&gt; on the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2016&#x2F;08&#x2F;10&#x2F;Shape-of-errors-to-come&#x2F;&quot;&gt;Rust compiler error messages&lt;&#x2F;a&gt;.
+And on many Rust &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;yew.rs&#x2F;&quot;&gt;Web&lt;&#x2F;a&gt;, &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;iced.rs&#x2F;&quot;&gt;GUI&lt;&#x2F;a&gt;,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ratatui.rs&#x2F;concepts&#x2F;application-patterns&#x2F;the-elm-architecture&#x2F;&quot;&gt;TUI&lt;&#x2F;a&gt;,
+and &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;red-badger.com&#x2F;crux&quot;&gt;App&lt;&#x2F;a&gt; frameworks. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;Truth be told, as this is my first API, I also relied on
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.manning.com&#x2F;books&#x2F;code-like-a-pro-in-rust&quot;&gt;Code Like a Pro in Rust&lt;&#x2F;a&gt;,
+which I had previously studied and modeled my initial design on its API
+chapter. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-3&quot;&gt;
+&lt;p&gt;Learning many ORMs, one or more for each language one uses, over just
+learning SQL? That also grants you database skills!? Nah. &lt;a href=&quot;#fr-3-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;footer&gt;
+</content>
+        <summary type="html">Dictionary restful API returning a random word. Learning project and demo.</summary>
+        </entry>
+</feed>

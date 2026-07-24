@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://funzen.xyz/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;funzen.xyz&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>helix editor</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://funzen.xyz/skins/red.css?h=3c0e688fbc84585f72ba" /><title>~/funzen - helix editor</title>
+        <subtitle>Andrea C. Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer. Hobbyist Photographer. HSP. Misfit. Idealist. Weirdo. Aspiring Rustacean. DADA.</subtitle>
+    <link href="https://funzen.xyz/tags/helix-editor/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://funzen.xyz/tags/helix-editor/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2026-01-27T00:00:00+00:00</updated><id>https://funzen.xyz/tags/helix-editor/atom.xml</id><entry xml:lang="en">
+        <title>rIDE: a composable non-IDE for terminal junkies</title>
+        <published>2025-10-20T00:00:00+00:00</published>
+        <updated>2026-01-27T00:00:00+00:00</updated>
+        <author>
+            <name>Andrea C</name>
+        </author>
+        <link rel="alternate" href="https://funzen.xyz/blog/my-regular-ide/" type="text/html"/>
+        <id>https://funzen.xyz/blog/my-regular-ide/</id>
+        
+            <content type="html">&lt;h2 id=&quot;premise&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#premise&quot; aria-label=&quot;Anchor link for: premise&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Premise&lt;&#x2F;h2&gt;
+&lt;p&gt;This is just my opinion and a very subjective affair. YMMV. I express
+preferences that may not match yours. And that’s fine. I neither pretend nor
+imply to lay down this as a paper nor as a definitive solution for everyone.
+There’s nothing scientific about this. Paraphrasing a Grace Jones
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;track&#x2F;1NN9UaLVAKq4ADId81JgUK&quot;&gt;song&lt;&#x2F;a&gt;: &lt;em&gt;this is not
+perfect, but it’s perfect for me&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;That being said, I’m passionate and I like sharing things I believe have merits
+and could benefit others. This is the spirit you should keep in mind, while
+reading this.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;credits&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#credits&quot; aria-label=&quot;Anchor link for: credits&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Credits&lt;&#x2F;h2&gt;
+&lt;p&gt;I first heard of non-IDE in &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;5tK-Y0kn_zE&quot;&gt;a Zed video&lt;&#x2F;a&gt;. That
+made me realize I was &lt;em&gt;assembling a non-IDE&lt;&#x2F;em&gt;. I had recently switched to Helix.
+I decided to name it &lt;code&gt;rIDE&lt;&#x2F;code&gt; and to blog about it, there and then. I believe they
+deserves credits for inspiring this blogpost.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-elevator-pitch&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-elevator-pitch&quot; aria-label=&quot;Anchor link for: the-elevator-pitch&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The Elevator Pitch&lt;&#x2F;h2&gt;
+&lt;p&gt;I’ve used &lt;em&gt;every text editor under the Sun&lt;&#x2F;em&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; and I’ve
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wiktionary.org&#x2F;wiki&#x2F;distro-hopping&quot;&gt;&lt;em&gt;editor hopped&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; for years,
+while sticking with (n)vim, looking for the &lt;em&gt;perfect IDE&lt;&#x2F;em&gt;. One that would fit my
+needs and tick all checkboxes&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Until I heard about
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;helix-editor.com&#x2F;&quot;&gt;Helix Editor&lt;&#x2F;a&gt; and decided to give it a go. Helix is
+fast. It’s modal. It’s featureful. It requires no maintenance. It supports all I
+need. The learning curve and switching costs were minimal. I never looked back.&lt;&#x2F;p&gt;
+&lt;p&gt;Helix, despite the name, &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;HcuDmSb-JBU&quot;&gt;is an IDE&lt;&#x2F;a&gt;.
+However, it doesn’t have - to name a few - a file manager, a terminal emulator,
+nor git porcelain. By design. Helix’s focus is to offer core IDE features - no
+more&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-3-1&quot;&gt;&lt;a href=&quot;#fn-3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; - out of the box. A choice akin to the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_philosophy&quot;&gt;UNIX philosophy&lt;&#x2F;a&gt;. One that other
+editors users may find limiting or lacking. On the other hand, it’s an approach
+that enables &lt;em&gt;comprehensive modularity&lt;&#x2F;em&gt;, which is &lt;code&gt;rIDE&lt;&#x2F;code&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-4-1&quot;&gt;&lt;a href=&quot;#fn-4&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; core principle.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;rIDE&lt;&#x2F;code&gt;, simply put, is: use the best tool for the job. Each with its own
+configuration&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-5-1&quot;&gt;&lt;a href=&quot;#fn-5&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Easy to integrate with Helix. Easy to replace, when you want
+to swap a specific tool for another. All within your favorite terminal emulator.
+Live happily ever after. 🥳 🎉&lt;&#x2F;p&gt;
+&lt;p&gt;Having to compose external tooling may seem unnecessary extra-work, at first. I
+thought so too, after some usage and when pondering the switch. It didn’t take
+me too long to accustom to this new normal, though. Which is comparable, for the
+most part, to using extensions. That said, the perks of the &lt;code&gt;rIDE&lt;&#x2F;code&gt; approach are
+numerous. Most importantly: a level of flexibility and peace of mind I haven’t
+had in a long time.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-full-story&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-full-story&quot; aria-label=&quot;Anchor link for: the-full-story&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The Full Story&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;holy-wars&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#holy-wars&quot; aria-label=&quot;Anchor link for: holy-wars&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Holy Wars&lt;&#x2F;h3&gt;
+&lt;p&gt;In my early days of involvement and falling in love with Copyleft&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-6-1&quot;&gt;&lt;a href=&quot;#fn-6&quot;&gt;6&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, I’ve
+ideologically been closer to &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.fsf.org&#x2F;&quot;&gt;FSF&lt;&#x2F;a&gt; than
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opensource.org&#x2F;&quot;&gt;OSI&lt;&#x2F;a&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-7-1&quot;&gt;&lt;a href=&quot;#fn-7&quot;&gt;7&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Thus, for reasons as silly as the
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Editor_war&quot;&gt;editor war&lt;&#x2F;a&gt;, I was tempted to join
+&lt;em&gt;The Church of Emacs&lt;&#x2F;em&gt;. Although, as I was looking into a Linux
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;System_administrator&quot;&gt;System Administrator&lt;&#x2F;a&gt;
+career, I made a pragmatic choice. Systems shipped vi(m). Thus, I learned vi(m)
+and extensively used (n)vim - vanilla, custom, with plugin managers, or
+distros - for about 20 years. It would still be my backup editor, should the
+need arise.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;terminal-mon-amour&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#terminal-mon-amour&quot; aria-label=&quot;Anchor link for: terminal-mon-amour&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Terminal Mon Amour&lt;&#x2F;h3&gt;
+&lt;p&gt;As system administrators do, I live(d) in the terminal (with or without a
+multiplexer). The terminal is my preferred environment. When feasible and
+reasonable, I rely on and prefer terminal applications. Not a brag. It’s
+relevant for later. Put a pin on this 📍&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;guisclaimer&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#guisclaimer&quot; aria-label=&quot;Anchor link for: guisclaimer&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+GUIsclaimer&lt;&#x2F;h3&gt;
+&lt;p&gt;Later, I’ll get into some of the editors I explored and used for a varying
+amount of time and degree of satisfaction. Some of them are graphical. A common
+issue I have with graphical editors: they slow me down. In this context, GUIs
+are distracting. I often have found myself fighting them and having to think
+about most interactions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;it-s-not-you-it-s-me&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#it-s-not-you-it-s-me&quot; aria-label=&quot;Anchor link for: it-s-not-you-it-s-me&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+It’s Not You, It’s Me&lt;&#x2F;h3&gt;
+&lt;p&gt;(n)vim is a great modal editor I love(d). It became second nature to me, and
+it’s the one I’ve always went back to during my editor hopping explorations.
+That being said, personal pain points motivated me to seek out alternatives.
+Lately, more intensely.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;every-text-editor-under-the-sun&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#every-text-editor-under-the-sun&quot; aria-label=&quot;Anchor link for: every-text-editor-under-the-sun&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Every Text Editor Under The Sun&lt;&#x2F;h3&gt;
+&lt;p&gt;Amongst the many I explored&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-2&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, whilst still using (n)vim&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-8-1&quot;&gt;&lt;a href=&quot;#fn-8&quot;&gt;8&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; as my &lt;code&gt;GOTO&lt;&#x2F;code&gt; and
+fallback, the three &lt;em&gt;alt-editors&lt;&#x2F;em&gt; shortlist, for &lt;em&gt;features-related merits&lt;&#x2F;em&gt;,
+comes down to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;VS Code: supports basically everything; Live Share &#x2F; pair programming tooling.&lt;&#x2F;li&gt;
+&lt;li&gt;DOOM Emacs: the meta key; &lt;em&gt;the bottom drawer&lt;&#x2F;em&gt;; which-key; the pickers; ease of
+configuration; one stop shop. Org Mode &#x2F; Roam &#x2F; Agenda. The list could go
+on&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-9-1&quot;&gt;&lt;a href=&quot;#fn-9&quot;&gt;9&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Zed: fast; written in Rust; native AI integration; great communication
+tooling.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;These are some of the features I wished a &lt;em&gt;definitive editor&lt;&#x2F;em&gt; would pack in by
+default. The single most important of the list - can you tell!? 😜 - is,
+arguably, DOOM Emacs. Lazyvim also plays a major role, when it comes to features
+set. We’ll get to them next.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;not-so-unique-pal&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#not-so-unique-pal&quot; aria-label=&quot;Anchor link for: not-so-unique-pal&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Not So Unique, Pal&lt;&#x2F;h3&gt;
+&lt;p&gt;Nowadays, the most widely used editors all share many features. Influencing and
+inspiring each others. Thank
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;knowyourmeme.com&#x2F;memes&#x2F;ceiling-cat&quot;&gt;Ceiling Cat&lt;&#x2F;a&gt; for Open Source!
+Nothing I’m about to say next is intended as unique to, nor distinguishing for,
+any particular editor. Helix is, however, the main subject of this whole story;
+and it’s used as basis of comparison.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;so-many-checkboxes&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#so-many-checkboxes&quot; aria-label=&quot;Anchor link for: so-many-checkboxes&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+So Many Checkboxes&lt;&#x2F;h3&gt;
+&lt;p&gt;While Helix didn’t implement all the desired features, it ticked enough
+checkboxes to convince me that it was worth sticking with it. To make the
+switch. To get used to it. Only then, ponder how to &lt;em&gt;fill in the blanks&lt;&#x2F;em&gt;. In no
+particular order, they all rock:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mode_(user_interface)&quot;&gt;Modal&lt;&#x2F;a&gt; text editor ✅&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Terminal_emulator&quot;&gt;Terminal&lt;&#x2F;a&gt; based ✅&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;corrode.dev&#x2F;blog&#x2F;foundational-software&#x2F;&quot;&gt;Written in Rust&lt;&#x2F;a&gt; ✅&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;4YU_r70yGjQ&quot;&gt;Blazingly fast&lt;&#x2F;a&gt; ✅&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-10-1&quot;&gt;&lt;a href=&quot;#fn-10&quot;&gt;10&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;HcuDmSb-JBU&quot;&gt;Core IDE features out of the box&lt;&#x2F;a&gt;
+✅&lt;&#x2F;li&gt;
+&lt;li&gt;Great
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;lang-support.html&quot;&gt;support for languages and tools&lt;&#x2F;a&gt;
+I care about ✅&lt;&#x2F;li&gt;
+&lt;li&gt;Minimal &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;configuration.html&quot;&gt;configuration&lt;&#x2F;a&gt; and
+maintenance ✅&lt;&#x2F;li&gt;
+&lt;li&gt;Great support for a &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;dg2TT1OJlQs&quot;&gt;keyboard-only&lt;&#x2F;a&gt; workflow ✅&lt;&#x2F;li&gt;
+&lt;li&gt;Minimal learning curve and switching costs ✅&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To me, these clearly were solid foundations I could build upon, at a later
+stage. 🍾 🎊&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;so-many-blanks-to-fill-in&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#so-many-blanks-to-fill-in&quot; aria-label=&quot;Anchor link for: so-many-blanks-to-fill-in&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+So Many Blanks To Fill In&lt;&#x2F;h3&gt;
+&lt;p&gt;Alas, early on in the switch, it still felt like Helix missed important bits I
+was used to. Let’s address the elephant in the room: how was I gonna fare
+without Vim’s mode and editing approach? &lt;em&gt;Action first&lt;&#x2F;em&gt; vs &lt;em&gt;Selection first&lt;&#x2F;em&gt;?
+Surely, the filliest elephant to filly-fill.&lt;&#x2F;p&gt;
+&lt;p&gt;And what about tooling? Helix doesn’t have, to name a few: extensions&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-3-2&quot;&gt;&lt;a href=&quot;#fn-3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; nor
+package managers, a file manager, a terminal emulator, nor git porcelain. &lt;em&gt;What
+you mean I have to install things externally?&lt;&#x2F;em&gt; &lt;em&gt;Can I easily integrate Lazygit?&lt;&#x2F;em&gt;
+So on and so forth.&lt;&#x2F;p&gt;
+&lt;p&gt;The blanks didn’t end there either. What about what’s left from the earlier
+shortlist?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-meat-of-the-tomato&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-meat-of-the-tomato&quot; aria-label=&quot;Anchor link for: the-meat-of-the-tomato&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The Meat Of The Tomato&lt;&#x2F;h2&gt;
+&lt;p&gt;Before discussing how to &lt;em&gt;fill in the blanks&lt;&#x2F;em&gt; and develop the &lt;code&gt;rIDE&lt;&#x2F;code&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-4-2&quot;&gt;&lt;a href=&quot;#fn-4&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+&lt;em&gt;concept&lt;&#x2F;em&gt;, let’s first expand on the checkboxes. Hereby grouped by their common
+characteristics. You should consider each of them as something absolutely
+indispensable, in this context.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;modal-and-terminal-based-text-editor&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#modal-and-terminal-based-text-editor&quot; aria-label=&quot;Anchor link for: modal-and-terminal-based-text-editor&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Modal and terminal based text editor&lt;&#x2F;h3&gt;
+&lt;p&gt;Being accustomed to (n)vim, with a long-serving experience, and
+&lt;a href=&quot;https:&#x2F;&#x2F;funzen.xyz&#x2F;blog&#x2F;my-regular-ide&#x2F;#guisclaimer&quot;&gt;suffering graphical text editors&lt;&#x2F;a&gt;, the &lt;em&gt;perfect editor&lt;&#x2F;em&gt; had to be
+both modal and run in my favorite terminal.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;written-in-rust-fast-and-featureful&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#written-in-rust-fast-and-featureful&quot; aria-label=&quot;Anchor link for: written-in-rust-fast-and-featureful&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Written in Rust. Fast and Featureful&lt;&#x2F;h3&gt;
+&lt;p&gt;I love Rust for &lt;a href=&quot;&#x2F;blog&#x2F;my-rust-story&#x2F;#software-engineering-with-rust&quot;&gt;personal&lt;&#x2F;a&gt;,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;nOSxuaDgl3s&quot;&gt;technical&lt;&#x2F;a&gt;, and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;rust-lang.org&#x2F;policies&#x2F;code-of-conduct&#x2F;&quot;&gt;social&lt;&#x2F;a&gt; reasons. You may love
+Zig (I’m &lt;em&gt;Zig-curious&lt;&#x2F;em&gt;), Go, or C++. For different reasons. That’s absolutely
+fine. As you’ll see in the next section, when we’ll get to &lt;code&gt;rIDE&lt;&#x2F;code&gt;, I do tend to
+go all-in but I’m not a maximalist.&lt;&#x2F;p&gt;
+&lt;p&gt;There are more specific points of the utmost importance - besides, of course,
+the responsiveness of executables built with it - in wanting the &lt;em&gt;perfect
+editor&lt;&#x2F;em&gt; to be written in Rust. I.e: its guarantees - like memory safety and
+error handling - and &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;k_-6KI3m31M&quot;&gt;its language design&lt;&#x2F;a&gt;. These
+may seem frivolous reasons but there’s a common thread: I’m not willing to cope
+with entire categories of bugs and annoyances, if I can help it.&lt;&#x2F;p&gt;
+&lt;p&gt;This leads into the last point: extensions vs
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;HcuDmSb-JBU&quot;&gt;core IDE features out of the box&lt;&#x2F;a&gt;.
+In this case, less is more. Specifically, less dependencies and things that can
+go wrong or that I have to manage. While no language is immune to supply chain
+attacks, this to me - I may be wrong, of course - feels like having a smaller
+attack surface, overall.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;support-for-languages-and-tools&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#support-for-languages-and-tools&quot; aria-label=&quot;Anchor link for: support-for-languages-and-tools&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Support for languages and tools&lt;&#x2F;h3&gt;
+&lt;p&gt;While Helix bakes in plenty
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;HcuDmSb-JBU&quot;&gt;core IDE features by default&lt;&#x2F;a&gt;, to
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;lang-support.html&quot;&gt;support languages&lt;&#x2F;a&gt; it relies
+on &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Language_Server_Protocol&quot;&gt;LSP&lt;&#x2F;a&gt;,
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tree-sitter.github.io&#x2F;tree-sitter&#x2F;&quot;&gt;Tree-sitter&lt;&#x2F;a&gt;, and external tooling.
+Such as language servers and, for example, external formatters. This is, of
+course, common to other editors and pretty much the standard. With a difference:
+most editors rely on package managers (or extensions) to install them. With
+Helix, one is required to install external tooling. Initially, this seemed a
+nuisance and a &lt;em&gt;bug&lt;&#x2F;em&gt;. It soon turned into a welcome &lt;em&gt;feature&lt;&#x2F;em&gt;. This was also the
+moment where &lt;em&gt;modularity as a plus&lt;&#x2F;em&gt; bubbled up my neural paths.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;minimal-configuration-and-maintenance&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#minimal-configuration-and-maintenance&quot; aria-label=&quot;Anchor link for: minimal-configuration-and-maintenance&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Minimal configuration and maintenance&lt;&#x2F;h3&gt;
+&lt;p&gt;(n)vim configurations can
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AS7mnDgFgnw&amp;amp;t=117s&quot;&gt;get out of hand&lt;&#x2F;a&gt; and turn
+into a PITA. Even an expert&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-11-1&quot;&gt;&lt;a href=&quot;#fn-11&quot;&gt;11&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; admits not touching it for a year; that must
+mean something. Distributions like Lazyvim (or DOOM Emacs) may do a great job at
+handling and hiding them for end users, however, this was still too high
+maintenance and my main paint point with it.&lt;&#x2F;p&gt;
+&lt;p&gt;On the other hand, Helix comes with great defaults and only has two main TOML
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;configuration.html&quot;&gt;configuration files&lt;&#x2F;a&gt;. One for
+the editor. One for customizing languages support. Needing to tweak the editor
+settings or languages support is, pretty much, &lt;em&gt;set and forget&lt;&#x2F;em&gt;. Something that
+doesn’t happen that often either. Mostly when swapping tools.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;support-for-a-keyboard-only-workflow&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#support-for-a-keyboard-only-workflow&quot; aria-label=&quot;Anchor link for: support-for-a-keyboard-only-workflow&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Support for a keyboard-only workflow&lt;&#x2F;h3&gt;
+&lt;p&gt;Arguably, this is the most subjective preference of the checkboxes. It does,
+however, tie in with &lt;a href=&quot;https:&#x2F;&#x2F;funzen.xyz&#x2F;blog&#x2F;my-regular-ide&#x2F;#guisclaimer&quot;&gt;my difficulties with graphical editors&lt;&#x2F;a&gt;.
+Moerover, it is a preference shared by most - if not all - terminal text editors
+users. Nonetheless, this is worth mentioning because Helix’s
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;usage.html#selection-first-editing&quot;&gt;&lt;em&gt;selection first editing&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;
+works amazingly for a mouseless workflow.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s the kicker: even more so than (n)vim’s &lt;em&gt;action first&lt;&#x2F;em&gt; approach.
+&lt;em&gt;“HERESY!!!”&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;As greatly stressed in this whole story, I’ve been using (n)vim for the best
+part of two decades. I enabled &lt;em&gt;Vim Mode&lt;&#x2F;em&gt; everywhere I could. This obviously was
+a huge blank to fill in. Unlike others, however, I neither think Helix made a
+bad design choice nor
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;usagi-flow&#x2F;evil-helix&quot;&gt;seek out an evil-mode&lt;&#x2F;a&gt;. Like I
+previously did by choosing DOOM Emacs over vanilla. This time, I wanted to see
+if it was worth making the switch. To get used to it. I love it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;minimal-learning-curve-and-switching-costs&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#minimal-learning-curve-and-switching-costs&quot; aria-label=&quot;Anchor link for: minimal-learning-curve-and-switching-costs&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Minimal learning curve and switching costs&lt;&#x2F;h3&gt;
+&lt;p&gt;The cat is out of the bag. The learning curve and switching costs mainly
+comprised the editing style: &lt;code&gt;selection →  action model&lt;&#x2F;code&gt; vs
+&lt;code&gt;action →  selection model&lt;&#x2F;code&gt;. Other differences were negligible enough. Missing
+features and tools? Easy to deal with. Moreover, exploring so many editors
+widened my perspectives. Adjusting to Helix mode, pickers, commands, and
+shortcuts, was never an issue in the first place.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;so-what-is-ride&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#so-what-is-ride&quot; aria-label=&quot;Anchor link for: so-what-is-ride&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+So, What Is rIDE?&lt;&#x2F;h2&gt;
+&lt;p&gt;By now, it should be clear that &lt;code&gt;rIDE&lt;&#x2F;code&gt; is &lt;em&gt;nothing new under the Sun&lt;&#x2F;em&gt;. The
+non-IDE concept pre-dates it. What it is, is my own approach to it and a funny -
+inside joke&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-4-3&quot;&gt;&lt;a href=&quot;#fn-4&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; - name; and, of course, a tooling set of choice. To wit, there
+are &lt;em&gt;distros&lt;&#x2F;em&gt; for Helix too. Like
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luccahuguet&#x2F;yazelix&quot;&gt;Yazelix&lt;&#x2F;a&gt;. This is something I looked up
+and gave it a miss. I was not going down that path again. No thanks. It would
+have meant picking a different distro lock-in, configuration-hell, and someone
+else’s (often maximalist) restrictive choices.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s start from what Helix does not feature by design, and compare my choices
+and differences with Yazelix. The most important is definitely the terminal
+emulator. This is where everything runs, after all. I made a different choice,
+for a few key reasons.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ghostty&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#ghostty&quot; aria-label=&quot;Anchor link for: ghostty&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Ghostty&lt;&#x2F;h3&gt;
+&lt;p&gt;Most Rust &lt;em&gt;aficionados&lt;&#x2F;em&gt; run with &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wezterm.org&#x2F;index.html&quot;&gt;WezTerm&lt;&#x2F;a&gt;. I
+did to, until I heard about &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ghostty.org&#x2F;&quot;&gt;Ghostty&lt;&#x2F;a&gt;. Yazelix (and most
+people using WezTerm) relies on &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;zellij.dev&#x2F;&quot;&gt;Zellij&lt;&#x2F;a&gt; to multiplex and
+resemble an IDE layout to run Helix and other tools. Whatever floats their
+boats. I did try the Zellij approach to run Helix on my own and it felt like
+&lt;a href=&quot;https:&#x2F;&#x2F;funzen.xyz&#x2F;blog&#x2F;my-regular-ide&#x2F;#guisclaimer&quot;&gt;a GUI editor all over again&lt;&#x2F;a&gt;. 😱&lt;&#x2F;p&gt;
+&lt;p&gt;Ghostty has many other great qualities that made me prefer it. Above all, it
+behaves natively on all platforms. Using the same keystrokes and macros on my
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;dg2TT1OJlQs&quot;&gt;ZSA Voyager&lt;&#x2F;a&gt; (with
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;colemakmods.github.io&#x2F;mod-dh&#x2F;&quot;&gt;Colemak DHm&lt;&#x2F;a&gt;) in all of my terminal
+based environment is a huge plus. Besides, Ghostty ships with clever split
+functionality and great tabs management.&lt;&#x2F;p&gt;
+&lt;p&gt;Final note on Zellij: I’d still use it in lieu of tmux for multiplexing tasks on
+a daily basis. Until: Ghostty delivers on
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;o-qtso47ECk&quot;&gt;its promise to revolutionize multiplexing&lt;&#x2F;a&gt; as
+well. When it will eventually be implemented, this feature will certainly spawn
+a number of tools and pave the road for wide open possibilities. I look forward
+to it to have &lt;em&gt;native&lt;&#x2F;em&gt; remote pair programming, sessions sharing, and
+communication integration. For the time being, I would like to try out
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;teamtype.github.io&#x2F;teamtype&#x2F;&quot;&gt;Team Type&lt;&#x2F;a&gt; and see how that works out.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;fish-shell-and-starship&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#fish-shell-and-starship&quot; aria-label=&quot;Anchor link for: fish-shell-and-starship&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Fish Shell and Starship&lt;&#x2F;h3&gt;
+&lt;p&gt;As an ex-system-administrator,
+&lt;a href=&quot;https:&#x2F;&#x2F;funzen.xyz&#x2F;blog&#x2F;my-regular-ide&#x2F;#terminal-mon-amour&quot;&gt;the CLI is my preferred habitat&lt;&#x2F;a&gt;. I don’t need a
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;POSIX&quot;&gt;non-POSIX&lt;&#x2F;a&gt;
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.nushell.sh&#x2F;&quot;&gt;fancy shell trying too hard&lt;&#x2F;a&gt;. I extensively used BASH
+and Zsh. So, lately, I’ve switched to &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fishshell.com&#x2F;&quot;&gt;Fish&lt;&#x2F;a&gt; and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;starship.rs&#x2F;&quot;&gt;Starship&lt;&#x2F;a&gt; for QoL improvements. That’s plenty already.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;helix-of-course&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#helix-of-course&quot; aria-label=&quot;Anchor link for: helix-of-course&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Helix, of Course&lt;&#x2F;h3&gt;
+&lt;p&gt;This should go without saying, however, it’s worth mentioning for a reason:
+running a terminal emulator within a terminal text editor (within a terminal
+multiplexer) within a terminal emulator seems too convoluted and inefficient.
+Especially if you can just run Helix in a Ghostty tab, and rely on the latter
+for terminal tabs or splits for any task you’d run in a terminal. And that’s it.
+&lt;em&gt;Missing feature&lt;&#x2F;em&gt;?! Quite the contrary.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;yazi-and-lazygit&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#yazi-and-lazygit&quot; aria-label=&quot;Anchor link for: yazi-and-lazygit&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Yazi and Lazygit&lt;&#x2F;h3&gt;
+&lt;p&gt;Let’s address the other two &lt;em&gt;missing features&lt;&#x2F;em&gt;: the file manager and git
+porcelain. Yazelix name is a portmanteau of &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;yazi-rs.github.io&#x2F;&quot;&gt;Yazi&lt;&#x2F;a&gt;
+and Helix. Yazi is a great TUI file manager. I do have it installed but rarely
+use it. I navigate the filesystem in the terminal when I need to. From there I
+open what’s needed, directly in Helix. Should I need to open more files, I rely
+on Helix file picker and fuzzy find.
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jesseduffield&#x2F;lazygit&quot;&gt;Lazygit&lt;&#x2F;a&gt;? I constantly rely on it.&lt;&#x2F;p&gt;
+&lt;p&gt;All it takes to integrate both with Helix - provided one has previously
+installed them - is just to add two lines to &lt;code&gt;~&#x2F;.config&#x2F;helix&#x2F;config.toml&lt;&#x2F;code&gt; to
+map them as pleased:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;[keys.normal]
+C-g = [&amp;quot;:new&amp;quot;, &amp;quot;:insert-output lazygit&amp;quot;, &amp;quot;:buffer-close!&amp;quot;, &amp;quot;:redraw&amp;quot;]
+A-f = [&amp;quot;:new&amp;quot;, &amp;quot;:insert-output yazi&amp;quot;, &amp;quot;:buffer-close!&amp;quot;, &amp;quot;:redraw&amp;quot;]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Side note: if you prefer &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;magit.vc&#x2F;&quot;&gt;Magit&lt;&#x2F;a&gt;, give
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;altsem&#x2F;gitu&quot;&gt;gitu&lt;&#x2F;a&gt; a try. Wanna use
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gitui-org&#x2F;gitui&#x2F;&quot;&gt;GitUI&lt;&#x2F;a&gt; instead? No problem! Just replace
+the name of the binary in that specific one liner! Easy peasy!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;catppuccin&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#catppuccin&quot; aria-label=&quot;Anchor link for: catppuccin&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Catppuccin&lt;&#x2F;h3&gt;
+&lt;p&gt;This is subjective, of course, but all it takes to theme Helix - and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;catppuccin.com&#x2F;ports&#x2F;&quot;&gt;all of &lt;code&gt;rIDE&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; - is to choose or install a theme
+and add a one liner to &lt;code&gt;~&#x2F;.config&#x2F;helix&#x2F;config.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;theme = &amp;quot;catppuccin_macchiato&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;kiro-cli&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#kiro-cli&quot; aria-label=&quot;Anchor link for: kiro-cli&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Kiro CLI&lt;&#x2F;h3&gt;
+&lt;p&gt;I don’t rely on AI too often and don’t subscribe to &lt;em&gt;vibe coding&lt;&#x2F;em&gt; (at all!),
+however, when using Zed I tried out AI and it was useful to some extent&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-12-1&quot;&gt;&lt;a href=&quot;#fn-12&quot;&gt;12&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. I
+went from &lt;em&gt;fully skeptic&lt;&#x2F;em&gt; to &lt;em&gt;cautious user&lt;&#x2F;em&gt; and I still agree with most
+criticisms. Especially with the argument about &lt;em&gt;AI in the hands of a
+knowledgeable user vs a cheap lazy sod&lt;&#x2F;em&gt;. I do like to use
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;claude.ai&quot;&gt;Claude Sonnet&lt;&#x2F;a&gt; with &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;kiro.dev&#x2F;cli&#x2F;&quot;&gt;Kiro CLI&lt;&#x2F;a&gt; for
+small, boring, and repetitive stuff; or when I struggle with an issue for too
+long and can’t understand it&#x2F;find my own solution.&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-13-1&quot;&gt;&lt;a href=&quot;#fn-13&quot;&gt;13&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;harper-and-codebook&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#harper-and-codebook&quot; aria-label=&quot;Anchor link for: harper-and-codebook&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Harper and Codebook&lt;&#x2F;h3&gt;
+&lt;p&gt;For grammar checks and typos avoidance, &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;writewithharper.com&#x2F;&quot;&gt;Harper&lt;&#x2F;a&gt;
+and &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;blopker&#x2F;codebook&quot;&gt;Codebook&lt;&#x2F;a&gt; are great.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;typst&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#typst&quot; aria-label=&quot;Anchor link for: typst&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Typst&lt;&#x2F;h3&gt;
+&lt;p&gt;There’s one last missing desired tool from
+&lt;a href=&quot;https:&#x2F;&#x2F;funzen.xyz&#x2F;blog&#x2F;my-regular-ide&#x2F;#every-text-editor-under-the-sun&quot;&gt;editors shortlist&lt;&#x2F;a&gt; to talk about:
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;orgmode.org&#x2F;&quot;&gt;Org Mode&lt;&#x2F;a&gt;. When I used DOOM Emacs as my daily driver, I
+fell in love with Org Mode. Its features set allows for great documents;
+especially with
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;orgmode.org&#x2F;worg&#x2F;org-tutorials&#x2F;org-latex-export.html&quot;&gt;LaTeX export&lt;&#x2F;a&gt; to
+anything. I wanted to migrate all my writings to it and even replace
+LibreOffice. That’s how powerful it is. When I left DOOM Emacs behind, I
+switched to Zed and &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;obsidian.md&#x2F;&quot;&gt;Obsidian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To wit: 1) Obsidian is OK; 2) I’ve since fantasized with the idea to create an
+office suite with Org Mode as its engine, in Rust. So, I sought out and found
+some ports and libraries but a) they don’t have features parity and b) I’m not
+that good (yet?!).&lt;&#x2F;p&gt;
+&lt;p&gt;And then one day, I stumbled upon &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;typst.app&#x2F;&quot;&gt;Typst&lt;&#x2F;a&gt;. They do a
+fantastic job indeed. So now, I’m thinking to migrate &lt;em&gt;everything writing&lt;&#x2F;em&gt; to it
+instead. At the moment I’m only using the web app to manage my CV with it. That
+being said, Typst engine is written in Rust and it’s Open Source. Anyway,
+momentarily I’d be content with using Typst with Helix for my writings. Guess
+what: Helix supports it out of the box or with minimal tweaks.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;[language-server.harper-ls]
+command = &amp;quot;harper-ls&amp;quot;
+args = [&amp;quot;--stdio&amp;quot;]
+
+[language-server.codebook]
+args = [&amp;quot;serve&amp;quot;]
+command = &amp;quot;codebook-lsp&amp;quot;
+
+[language-server.tinymist]
+command = &amp;quot;tinymist&amp;quot;
+
+[[language]]
+name = &amp;quot;typst&amp;quot;
+language-servers = [&amp;quot;tinymist&amp;quot;, &amp;quot;harper-ls&amp;quot;, &amp;quot;codebook&amp;quot;]
+formatter = { command = &amp;quot;typstyle&amp;quot; }
+auto-format = true
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;markdown-oxide&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#markdown-oxide&quot; aria-label=&quot;Anchor link for: markdown-oxide&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Markdown Oxide&lt;&#x2F;h3&gt;
+&lt;p&gt;While Typst would work great to replace &lt;em&gt;everything writing&lt;&#x2F;em&gt;, I’d still like to
+rely on &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;oxide.md&quot;&gt;Markdown Oxide&lt;&#x2F;a&gt; for
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Personal_knowledge_management&quot;&gt;PKMS&lt;&#x2F;a&gt;. I’ve been
+fascinated by &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Zettelkasten&quot;&gt;Zettelkasten&lt;&#x2F;a&gt; and
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.orgroam.com&#x2F;&quot;&gt;Org Roam&lt;&#x2F;a&gt;, for a while. However, I never went farther
+than using &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;zettelkasten.de&#x2F;the-archive&#x2F;&quot;&gt;The Archive&lt;&#x2F;a&gt; app for my
+creative writings; then replaced by Obsidian. Mostly because Obsidian offers a
+mobile app with sync. I’d like to ditch Obsidian in favor of a &lt;em&gt;full Helix
+experience&lt;&#x2F;em&gt;, though.&lt;&#x2F;p&gt;
+&lt;p&gt;Helix easily supports Markdown Oxide - install it and add a few lines. To avoid
+conflicts with my global settings, I rely on Helix local settings and a &lt;em&gt;on
+demand&lt;&#x2F;em&gt; bespoke &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.nixos.org&#x2F;wiki&#x2F;Flakes&quot;&gt;Nix Flake&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;nix&quot; class=&quot;language-nix &quot;&gt;&lt;code class=&quot;language-nix&quot; data-lang=&quot;nix&quot;&gt;{
+  description = &amp;quot;PKMS environment with Markdown Oxide&amp;quot;;
+
+  inputs = {
+    nixpkgs.url = &amp;quot;github:NixOS&amp;#x2F;nixpkgs&amp;#x2F;nixos-unstable&amp;quot;;
+    flake-parts.url = &amp;quot;github:hercules-ci&amp;#x2F;flake-parts&amp;quot;;
+  };
+
+  outputs =
+    inputs@{
+      flake-parts,
+      nixpkgs,
+      ...
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [
+        &amp;quot;x86_64-linux&amp;quot;
+        &amp;quot;aarch64-linux&amp;quot;
+        &amp;quot;x86_64-darwin&amp;quot;
+        &amp;quot;aarch64-darwin&amp;quot;
+      ];
+
+      perSystem =
+        {
+          config,
+          self&amp;#x27;,
+          inputs&amp;#x27;,
+          pkgs,
+          system,
+          ...
+        }:
+        {
+          devShells.default = pkgs.mkShell {
+            name = &amp;quot;oxide-pkms&amp;quot;;
+
+            buildInputs = with pkgs; [
+              harper
+              codebook
+              markdown-oxide
+              mpls
+              starship
+            ];
+
+            shellHook = &amp;#x27;&amp;#x27;
+              eval &amp;quot;$(starship init bash)&amp;quot;
+
+              # Create .helix directory and manage the local languages.toml
+              mkdir -p .helix
+
+              cat &amp;gt; .helix&amp;#x2F;languages.toml &amp;lt;&amp;lt;- EOF
+              [language-server.harper-ls]
+              command = &amp;quot;harper-ls&amp;quot;
+              args = [&amp;quot;--stdio&amp;quot;]
+
+              [language-server.codebook]
+              command = &amp;quot;codebook-lsp&amp;quot;
+              args = [&amp;quot;serve&amp;quot;]
+
+              [language-server.mpls]
+              command=&amp;quot;mpls&amp;quot;
+              args = [
+                &amp;quot;--browser&amp;quot;,
+                &amp;quot;duckduckgo&amp;quot;,
+                &amp;quot;--no-auto&amp;quot;,
+                &amp;quot;--full-sync&amp;quot;,
+                &amp;quot;--enable-emoji&amp;quot;,
+                &amp;quot;--enable-footnotes&amp;quot;,
+                &amp;quot;--code-style&amp;quot;,
+                &amp;quot;catppuccin-macchiato&amp;quot;,
+              ]
+
+              [[language]]
+              name = &amp;quot;markdown&amp;quot;
+              language-servers = [&amp;quot;markdown-oxide&amp;quot;, &amp;quot;harper-ls&amp;quot;, &amp;quot;codebook&amp;quot;, &amp;quot;mpls&amp;quot;]
+              auto-format = true
+              EOF
+
+              cat &amp;lt;&amp;lt;- EOF
+
+              PKMS environment with https:&amp;#x2F;&amp;#x2F;oxide.md
+
+              EOF
+            &amp;#x27;&amp;#x27;;
+          };
+        };
+    };
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;you-get-the-gist&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#you-get-the-gist&quot; aria-label=&quot;Anchor link for: you-get-the-gist&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+You Get the Gist&lt;&#x2F;h3&gt;
+&lt;p&gt;I could go on about Helix languages support and how to configure them, or about
+adding more tooling to &lt;code&gt;rIDE&lt;&#x2F;code&gt;, but that would be pointless. In sharing all this,
+I just wanted to counter frequent criticisms and exemplify &lt;em&gt;my idea&lt;&#x2F;em&gt; to give
+meaning to it all. If you like the &lt;em&gt;concept of a modular IDE&lt;&#x2F;em&gt;, hereby presented
+as &lt;em&gt;rIDE&lt;&#x2F;em&gt;, the sky is the limit. Whether you do or don’t, I’d like to invite you
+to try out Helix, if you please:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.helix-editor.com&#x2F;&quot;&gt;Helix Documentation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;helix-editor.vercel.app&#x2F;start-here&#x2F;basics&quot;&gt;Helix Tutorial&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;nik-rev.github.io&#x2F;helix-golf&#x2F;&quot;&gt;Helix Golf&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtube.com&#x2F;playlist?list=PL4AR7tbGuBH5AzV0tPpTfYgGIF5vk3HN2&quot;&gt;Helix Editor Tutorial Series&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Thank you so much for your time, I appreciate you.&lt;&#x2F;p&gt;
+&lt;p&gt;🍻🚌&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;footer class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;A non-exhaustive and non-chronological list of the ones I do remember
+exploring: Gedit. BBEdit. Notepad++. TextMate. Sublime. Atom. VS Code. Zed.
+Rust Rover. DOOM Emacs. Possibly more, but probably not worth recalling. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-1-2&quot;&gt;↩2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;During my explorations, I always missed (n)vim - not the pain points that
+made me look for others in the first place, though - and always came back to
+it. Having said that, I really liked some of the features of some of the
+other editors too. This made me long for an editor that would &lt;em&gt;Frankenstein&lt;&#x2F;em&gt;
+those into a single package. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-3&quot;&gt;
+&lt;p&gt;If you are wondering: yes, Helix
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;discussions&#x2F;3806&quot;&gt;will eventually be extensible with plugins&lt;&#x2F;a&gt; -
+should you need those. However, this would not mean that Helix will distort
+its core philosophy. &lt;a href=&quot;#fr-3-1&quot;&gt;↩&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-3-2&quot;&gt;↩2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-4&quot;&gt;
+&lt;p&gt;The &lt;code&gt;r&lt;&#x2F;code&gt; in &lt;code&gt;rIDE&lt;&#x2F;code&gt; stands for &lt;em&gt;Regular&lt;&#x2F;em&gt;. It is both an inside joke for
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wfmu.org&#x2F;playlists&#x2F;KF&quot;&gt;Ken&lt;&#x2F;a&gt;’s listeners and a play on the fact that
+it’s technically not an IDE. Let alone a &lt;em&gt;regular one&lt;&#x2F;em&gt;. &lt;a href=&quot;#fr-4-1&quot;&gt;↩&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-4-2&quot;&gt;↩2&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-4-3&quot;&gt;↩3&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-5&quot;&gt;
+&lt;p&gt;As opposed to having a humongous (n)vim configuration you have to schedule
+maintenance for; one would install and configure external tooling
+independently from Helix. We’ll get into this, when expanding on rIDE, much
+later. &lt;a href=&quot;#fr-5-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-6&quot;&gt;
+&lt;p&gt;Care to read
+&lt;a href=&quot;&#x2F;blog&#x2F;my-linux-story&#x2F;&quot;&gt;&lt;em&gt;My Linux Story or: How I Fell in Love with Copyleft and Revolution&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;? &lt;a href=&quot;#fr-6-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-7&quot;&gt;
+&lt;p&gt;There are pretty good arguments to be made. I’ll blog about this too,
+soon-ish. &lt;a href=&quot;#fr-7-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-8&quot;&gt;
+&lt;p&gt;With custom configurations and &#x2F; or plugins managers; or distros like
+Lunarvim, AstroNvim, and Lazyvim. &lt;a href=&quot;#fr-8-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-9&quot;&gt;
+&lt;p&gt;When I switched to
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=KKfxgSY7O8E&amp;amp;t=158s&quot;&gt;DOOM Emacs&lt;&#x2F;a&gt; for a short
+while, I realized many of the tooling I was used to and loved in Lazyvim
+(for sake of argument) that the amazing and incredibly prolific
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;folke&quot;&gt;folke&lt;&#x2F;a&gt; develops, were concepts inspired from
+Emacs counterparts. It was revealing. These were the catalysts toward the
+final step. Please, correct me if I’m mistaken. &lt;a href=&quot;#fr-9-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-10&quot;&gt;
+&lt;p&gt;I cite &lt;em&gt;every JavaScript framework motto&lt;&#x2F;em&gt; mainly as a joke. Anyway, if you
+&lt;em&gt;hate yourself&lt;&#x2F;em&gt; you could watch this
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;4YU_r70yGjQ&quot;&gt;fasterthanlime take&lt;&#x2F;a&gt; instead. &lt;a href=&quot;#fr-10-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-11&quot;&gt;
+&lt;p&gt;I can’t pin point exactly where The Primagen said it. I think it was during
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;tNZnLkRBYA8?si=6-opbkbKP-Iuydl0&quot;&gt;his appearance on Lex Fridman&lt;&#x2F;a&gt;.
+A great watch. I’m not a regular follower of neither but I genuinely
+appreciated their conversation and felt (not as in pity) for him. I may not
+agree with most of his takes and only occasionally watch his content for
+&lt;em&gt;light entertainment&lt;&#x2F;em&gt; - I don’t mean this derogatorily - however, I have
+plenty respect for The Primagen story. You should make time for it and watch
+it. &lt;a href=&quot;#fr-11-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-12&quot;&gt;
+&lt;p&gt;When relying on AI, however, I won’t &lt;em&gt;just let it do stuff&lt;&#x2F;em&gt;. When I need
+help to &lt;em&gt;understand an issue&lt;&#x2F;em&gt; it’s analysis first. In the case of &lt;em&gt;help me
+code this&lt;&#x2F;em&gt;, I like
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Prompt_engineering&quot;&gt;prompt engineering&lt;&#x2F;a&gt;. &lt;a href=&quot;#fr-12-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-13&quot;&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Enshittification&quot;&gt;Enshittification&lt;&#x2F;a&gt; has
+rendered search engines, basically, SPAM and scam engines. I begrudgingly
+find it quicker to ask my contextualized Kiro cli - after some reading of
+notes and bookmarked articles - to help me understanding an issue at hand.
+Of course, with a good dose of skepticism and the proverbial &lt;em&gt;pinch of
+salt&lt;&#x2F;em&gt;. &lt;a href=&quot;#fr-13-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;footer&gt;
+</content>
+        </entry>
+</feed>

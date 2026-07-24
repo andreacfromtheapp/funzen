@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://funzen.xyz/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;funzen.xyz&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>command line utilities</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://funzen.xyz/skins/red.css?h=3c0e688fbc84585f72ba" /><title>~/funzen - command line utilities</title>
+        <subtitle>Andrea C. Versatile Creative. Hobbyist Musician. Hobbyist Sound Designer. Hobbyist Writer. Hobbyist Photographer. HSP. Misfit. Idealist. Weirdo. Aspiring Rustacean. DADA.</subtitle>
+    <link href="https://funzen.xyz/tags/command-line-utilities/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://funzen.xyz/tags/command-line-utilities/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2024-08-06T00:00:00+00:00</updated><id>https://funzen.xyz/tags/command-line-utilities/atom.xml</id><entry xml:lang="en">
+        <title>Freesound Credits</title>
+        <published>2024-08-06T00:00:00+00:00</published>
+        <updated>2024-08-06T00:00:00+00:00</updated>
+        <author>
+            <name>Andrea C</name>
+        </author>
+        <link rel="alternate" href="https://funzen.xyz/projects/freesound-credits/" type="text/html"/>
+        <id>https://funzen.xyz/projects/freesound-credits/</id>
+        
+            <content type="html">&lt;p&gt;A command line utility to help you credit &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;freesound.org&quot;&gt;Freesound&lt;&#x2F;a&gt;
+samples for any given project.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rationale&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#rationale&quot; aria-label=&quot;Anchor link for: rationale&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Rationale&lt;&#x2F;h2&gt;
+&lt;p&gt;Giving credits in the &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;creativecommons.org&quot;&gt;Creative Commons&lt;&#x2F;a&gt; community
+is often the sole requirement to freely use samples in your creations. This tool
+helps you abide to &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Copyleft&quot;&gt;Copyleft&lt;&#x2F;a&gt; and credit
+the generous artists whom contribute to &lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;freesound.org&quot;&gt;Freesound&lt;&#x2F;a&gt;,
+helping your creativity.&lt;&#x2F;p&gt;
+&lt;p&gt;Giving credits may have been a cumbersome and tedious process you begrudged.
+This may have been stopping you from giving credits altogether. Not anymore!&lt;&#x2F;p&gt;
+&lt;p&gt;It takes seconds now! How? Instructions on
+&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;andreacfromtheapp&#x2F;freesound-credits?tab=readme-ov-file#freesound-credits&quot;&gt;Freesound Credits&lt;&#x2F;a&gt;
+README file.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;credits&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#credits&quot; aria-label=&quot;Anchor link for: credits&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Credits&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;thenounproject.com&#x2F;icon&#x2F;sound-wave-7787042&#x2F;&quot;&gt;Sound Wave image by Dwi Ridwanto&lt;&#x2F;a&gt;
+from Noun Project used under CC BY 3.0.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">Command line utility to credit Freesound samples in a usable markdown file</summary>
+        </entry>
+</feed>
