@@ -309,7 +309,7 @@ fediverse_creator = { handle = "andreacfromtheapp", domain = "c.im" }
 
 menu = [
   { name = "blog", url = "blog", trailing_slash = true },
-  { name = "series", url = "series", trailing_slash = true },
+  # { name = "series", url = "series", trailing_slash = true },
   { name = "projects", url = "projects", trailing_slash = true },
   { name = "tags", url = "tags", trailing_slash = true },
   { name = "about", url = "about", trailing_slash = true },
