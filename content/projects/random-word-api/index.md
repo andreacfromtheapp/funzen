@@ -33,7 +33,7 @@ point list. A technical learning summary is available in the
 README file. I hope you like it as much as I loved learning with this project!
 ❤️🦀
 
-## What this Is
+## What This Is
 
 A [restful API](https://restfulapi.net/) built with
 [Axum](https://github.com/tokio-rs/axum) in Rust and a personal project to dive

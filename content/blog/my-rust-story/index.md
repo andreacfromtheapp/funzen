@@ -120,12 +120,10 @@ interest from indie labels and moderate success, filled all but one of
 [Ikigai](https://en.wikipedia.org/wiki/Ikigai)'s aspects. Take a guess.[^3]
 
 <!-- prettier-ignore-start -->
-{{ full_width_image(
-    src="img/ikigai-diagram.webp",
-    alt="Guess which one...",
-    title="Guess which one..."
-    )
-}}
+{{< full_width_image
+    src="img/ikigai-diagram.webp"
+    alt="Guess which one..."
+/>}}
 <!-- prettier-ignore-end -->
 
 Besides, _“the Impostor Syndrome is strong with this one”_. _I don't know music
@@ -235,12 +233,10 @@ as humanly and reasonably possible. To be(come) a good Software Engineer, with a
 focus on Rust.
 
 <!-- prettier-ignore-start -->
-{{ full_width_image(
-    src="img/pillars.webp",
-    alt="The pillars of good software design",
-    title="The pillars of good software design"
-    )
-}}
+{{< full_width_image
+    src="img/pillars.webp"
+    alt="The pillars of good software design"
+/>}}
 <!-- prettier-ignore-end -->
 
 Now, could it be viable professionally? Whilst the market is _momentarily
