@@ -154,7 +154,7 @@ insert_anchor_links = "none"
 error_on_missing_language = true
 
 # Whether to use inline hex colours (`inline`) or CSS classes (`class`)
-style = "inline"
+style = "class"
 
 # Selecting a theme is always required: you have a choice between single (1) or dual themes (2).
 # Only outputting CSS classes like before 0.22 is not possible anymore.
@@ -285,7 +285,7 @@ quick_navigation_buttons = true
 separator = "•"
 
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
-long_date_format = "%d %B %Y"
+long_date_format = "dd MMMM y"
 short_date_format = ""
 
 # Use a shorter layout for All tags listing.
