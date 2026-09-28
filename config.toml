@@ -328,7 +328,7 @@ socials = [
   { name = "LinkedIn", url = "https://www.linkedin.com/in/andreacallea", icon = "linkedin" },
   # { name = "Pixelfed", url = "https://gram.social/i/web/profile/791291086346482905", icon = "pixelfed" },
   # { name = "PeerTube", url = "https://makertube.net/a/gentlewash/video-channels", icon = "peertube" },
-  { name = "Music", url = "https://gentlewashrecords.com/", icon = "circle-play" },
+  { name = "Music", url = "https://gentlewashrecords.com/", icon = "music-solid-full" },
   { name = "Vimeo", url = "https://vimeo.com/earlistensound", icon = "vimeo" },
 ]
 
