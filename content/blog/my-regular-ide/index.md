@@ -1,7 +1,7 @@
 +++
 title="rIDE: a composable non-IDE for terminal junkies"
 date="2025-10-20"
-updated="2026-01-27"
+updated="2026-10-26"
 
 [taxonomies]
 tags = ["rust", "software engineering", "faq", "ide", "helix editor"]
@@ -218,8 +218,7 @@ moment where _modularity as a plus_ bubbled up my neural paths.
 
 (n)vim configurations can
 [get out of hand](https://www.youtube.com/watch?v=AS7mnDgFgnw&t=117s) and turn
-into a PITA. Even an expert[^11] admits not touching it for a year; that must
-mean something. Distributions like Lazyvim (or DOOM Emacs) may do a great job at
+into a PITA. Distributions like Lazyvim (or DOOM Emacs) may do a great job at
 handling and hiding them for end users, however, this was still too high
 maintenance and my main paint point with it.
 
@@ -352,16 +351,25 @@ and add a one liner to `~/.config/helix/config.toml`:
 theme = "catppuccin_macchiato"
 ```
 
-### Kiro CLI
+### Ollama
 
-I don't rely on AI too often and don't subscribe to _vibe coding_ (at all!),
-however, when using Zed I tried out AI and it was useful to some extent[^12]. I
-went from _fully skeptic_ to _cautious user_ and I still agree with most
-criticisms. Especially with the argument about _AI in the hands of a
-knowledgeable user vs a cheap lazy sod_. I do like to use
-[Claude Sonnet](https://claude.ai) with [Kiro CLI](https://kiro.dev/cli/) for
-small, boring, and repetitive stuff; or when I struggle with an issue for too
-long and can't understand it/find my own solution.[^13]
+I don't rely on AI too often and I can't stand the hype and
+[what it stands for](https://buttondown.com/creativegood/archive/ghost-in-the-machine-shows-what-were-fighting/),
+however, when using Zed I tried out its AI features and they were useful to some
+extent[^11]. Admittedly, some use cases are a great fit; but this is another can
+of worms.
+
+That said, I concur with most criticisms. Especially those concerning the
+ecological impact and the ones in favor of all human beings. Nonetheless, AI as
+a technology is here to stay in some form or another; even after the bubble will
+eventually pop. Thus, I tried out what seemed the less impactful way of using
+it: run AI completely locally.
+
+Thanks to [Ollama](https://ollama.com/),
+[LSP-AI](https://github.com/SilasMarvin/lsp-ai),
+[Aider Chat](https://aider.chat/), and
+[AIChat](https://github.com/sigoden/aichat/), I added AI functionality to Helix
+and kinda matched what I liked about Zed and Kiro CLI when trying them out.
 
 ### Harper and Codebook
 
@@ -593,25 +601,7 @@ Thank you so much for your time, I appreciate you.
     [fasterthanlime take](https://youtu.be/4YU_r70yGjQ) instead.
 
 [^11]:
-    I can't pin point exactly where The Primagen said it. I think it was during
-    [his appearance on Lex Fridman](https://youtu.be/tNZnLkRBYA8?si=6-opbkbKP-Iuydl0).
-    A great watch. I'm not a regular follower of neither but I genuinely
-    appreciated their conversation and felt (not as in pity) for him. I may not
-    agree with most of his takes and only occasionally watch his content for
-    _light entertainment_ - I don't mean this derogatorily - however, I have
-    plenty respect for The Primagen story. You should make time for it and watch
-    it.
-
-[^12]:
     When relying on AI, however, I won't _just let it do stuff_. When I need
-    help to _understand an issue_ it's analysis first. In the case of _help me
-    code this_, I like
-    [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering).
-
-[^13]:
-    [Enshittification](https://en.wikipedia.org/wiki/Enshittification) has
-    rendered search engines, basically, SPAM and scam engines. I begrudgingly
-    find it quicker to ask my contextualized Kiro cli - after some reading of
-    notes and bookmarked articles - to help me understanding an issue at hand.
-    Of course, with a good dose of skepticism and the proverbial _pinch of
-    salt_.
+    help to _understand an issue_ it's analysis first. When I ask it to _help me
+    code this_, I like to be in charge (aka I'm not a meat proxy nor a slopper).
+    And fuck vibe coding, btw.
