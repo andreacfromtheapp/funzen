@@ -422,7 +422,7 @@ auto-format = true
 ### Markdown Oxide
 
 While Typst would work great to replace _everything writing_, I'd still like to
-rely on [Markdown Oxide](https://oxide.md) for
+rely on [Oxide](https://oxide.md) for
 [PKMS](https://en.wikipedia.org/wiki/Personal_knowledge_management). I've been
 fascinated by [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) and
 [Org Roam](https://www.orgroam.com/), for a while. However, I never went farther
@@ -431,9 +431,9 @@ creative writings; then replaced by Obsidian. Mostly because Obsidian offers a
 mobile app with sync. I'd like to ditch Obsidian in favor of a _full Helix
 experience_, though.
 
-Helix easily supports Markdown Oxide - install it and add a few lines. To avoid
-conflicts with my global settings, I rely on Helix local settings and a _on
-demand_ bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
+Helix easily supports Oxide - install it and add a few lines. To avoid conflicts
+with my global settings, I rely on Helix local settings and a _on demand_
+bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
 
 ```nix
 {
@@ -451,12 +451,7 @@ demand_ bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
+      systems = inputs.nixpkgs.lib.systems.flakeExposed;
 
       perSystem =
         {
@@ -523,6 +518,7 @@ demand_ bespoke [Nix Flake](https://wiki.nixos.org/wiki/Flakes):
         };
     };
 }
+
 ```
 
 ### You Get the Gist
